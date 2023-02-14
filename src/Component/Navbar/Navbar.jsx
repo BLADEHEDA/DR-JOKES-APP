@@ -5,7 +5,7 @@ import close from "../../images/icon-close.svg"
 
 const Navbar = () => {
   const [links,setLinks]=useState();
-  const display = links?"show":"navlinks-mobile"
+  const displayNavbar = links?"show":"navlinks-mobile"
   return (
     <div className='Navbar  px-5 py-7'>
       <div className="navbar-mobile mobile flex justify-between">
