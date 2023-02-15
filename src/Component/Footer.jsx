@@ -1,8 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFaceAngry,faRetweet} from '@fortawesome/free-solid-svg-icons'
-
-
+import { faFacebookSquare , faTwitter,faInstagram,faPinterest} from "@fortawesome/free-brands-svg-icons"
 
 
 
@@ -14,12 +13,12 @@ const Footer = () => {
       <ul className="links"> 
       <li className="link mb-[0.3em]">ABOUT</li>
       <li className="link">CONTACT</li>
-      <p className="icons mt-[1em] text-xl"> GET IN TOUCH</p>
+      <p className="icons my-[1em] text-xl "> GET IN TOUCH</p>
       <div className="icons flex  justify-center mt-3"> 
-      <div className="icon"><FontAwesomeIcon icon={faFaceAngry} className="text-2xl mt-1"  /> </div>
-      <div className="icon"><FontAwesomeIcon icon={faRetweet} className="text-2xl mt-1"  /> </div>
-      <div className="icon"><FontAwesomeIcon icon={faFaceAngry} className="text-2xl mt-1"  /> </div>
-      <div className="icon"><FontAwesomeIcon icon={faRetweet} className="text-2xl mt-1"  /> </div>
+      <div className="icon"><FontAwesomeIcon icon={faFacebookSquare } className="text-[1.75rem] "  /> </div>
+      <div className="icon"><FontAwesomeIcon icon={faTwitter } className="text-[1.75rem]"  /> </div>
+      <div className="icon"><FontAwesomeIcon icon={faInstagram} className="text-[1.75rem]"  /> </div>
+      <div className="icon"><FontAwesomeIcon icon={faPinterest} className="text-[1.75rem] "  /> </div>
       </div>
       </ul>
     </div>
