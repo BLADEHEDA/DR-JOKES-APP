@@ -16,7 +16,7 @@ const Testimony = (props) => {
 //    ]
 const Testimonial = () => {
   return (
-    <div className='Testimonial mb-[20em]'>
+    <div className='Testimonial mb-[5em]'>
         <h1 className="Testimonial-head font-bold text-2xl text-center mt-[2em]">What Our Users Say </h1>
         <Testimony 
         src={textimonial1}

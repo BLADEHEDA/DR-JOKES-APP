@@ -4,6 +4,7 @@ import Mainbar from './Component/Mainbar';
 import Navbar from './Component/Navbar/Navbar';
 import JokesCategory from './Component/JokesCategory';
 import Testimonial from './Component/Testimonial';
+import Footer from './Component/Footer';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <JokesDay/>
       <JokesCategory/>
       <Testimonial/>
+      <Footer/>
 
     </section>
   );
