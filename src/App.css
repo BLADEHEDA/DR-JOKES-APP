@@ -2,16 +2,18 @@
 @media only screen and (min-width:1px){
 .mobile{
   display: flex;
-  border: solid 1px black;
+}
+.App{
+  padding:2em 1.5em;
+  background: rgba(248, 245, 245, 1);
 }
 .desktop{
   display: none;
 }
 .navlinks-mobile{
-  /* display: none; */
-    border: solid 1px black;
+  display: none;
     top:5em;
-    width: 89vw;
+    width: 87vw;
     background:rgba(0, 0, 0, 0.9);
 }
 .navlink {
@@ -20,7 +22,52 @@
   text-align:center;
   margin-bottom:0.7em;
 }
-.show{
-   display: none;
+.close{
+  left:18em;
 }
+.show{
+   display: block;
+}
+/* the styles that pfor the mainbafr */
+.hero-img{
+  margin:1em 0em;
+}
+.hero-pic{
+width: 20em;
+}
+.main-section-btn{
+  margin:0 auto;
+  width: 42%;
+}
+.dayjokes-div,.jokescategory-div,.Testimony{
+  border: solid 1px black;  
+  background: white;
+}
+.jokes-emoji-div{
+  margin:0 auto;
+}
+/* .category-img-div{
+  margin:0 auto;
+  border: solid 1px black;  
+  width: 15%;
+} */
+}
+
+@media only screen and (min-width:768px){ 
+  .mobile{
+    display: none;
+  }
+  .App{
+    /* border: solid 5px black; */
+    padding:2em 6em;
+  }
+.desktop{
+  display: flex;
+}
+.navlink {
+  font-weight:500;
+  color :black;
+  margin-bottom:0.7em;
+}
+
 }
