@@ -46,11 +46,6 @@ width: 20em;
 .jokes-emoji-div{
   margin:0 auto;
 }
-/* .category-img-div{
-  margin:0 auto;
-  border: solid 1px black;  
-  width: 15%;
-} */
 }
 
 @media only screen and (min-width:768px){ 
