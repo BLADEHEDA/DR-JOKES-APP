@@ -46,6 +46,10 @@ width: 20em;
 .jokes-emoji-div{
   margin:0 auto;
 }
+.Footer{
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
 }
 
 @media only screen and (min-width:768px){ 

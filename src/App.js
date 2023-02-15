@@ -9,12 +9,15 @@ import Footer from './Component/Footer';
 function App() {
 
   return (
-    <section className="App">
+  
+    <section >
+      <section className="App"> 
       <Navbar/>
       <Mainbar/>
       <JokesDay/>
       <JokesCategory/>
       <Testimonial/>
+      </section>
       <Footer/>
 
     </section>
