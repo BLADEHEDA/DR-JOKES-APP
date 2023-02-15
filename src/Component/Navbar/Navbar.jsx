@@ -5,7 +5,7 @@ import close from "../../images/icon-close.svg"
 
 const Navbar = () => {
   const [links,setLinks]=useState();
-  const displayNavbar = links?"navlinks-mobile":"show";
+  const displayNavbar = links?"show":"navlinks-mobile";
   // toggle the navbar component 
   const togleNav=()=>{
     setLinks(!links)
