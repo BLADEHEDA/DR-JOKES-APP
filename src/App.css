@@ -40,7 +40,7 @@ width: 20em;
   width: 42%;
 }
 .dayjokes-div,.jokescategory-div,.Testimony{
-  border: solid 1px black;  
+  /* border: solid 1px black;   */
   background: white;
 }
 .jokes-emoji-div{
