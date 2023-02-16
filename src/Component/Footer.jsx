@@ -18,7 +18,7 @@ const Footer = () => {
       </footer>
       <p className="icons my-[1em] text-xl  mobile"> GET IN TOUCH</p>
       <footer className="flex-two md:flex justify-between">     
-      <p className="copyright-text desktop mt-[1em]">@Copyright  2023  </p>
+      <p className="copyright-text desktop mt-[1em] ">@Copyright  2023  </p>
      
       <div className="icons flex  justify-center mt-3"> 
       <div className="icon"><FontAwesomeIcon icon={faFacebookSquare } className="text-[1.75rem] "  /> </div>

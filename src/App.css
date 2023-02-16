@@ -86,7 +86,6 @@ width: 20em;
   padding:2em 5em;
 }
 .dayjokes-div-section,.JokesCategory,.Testimonial-section{
-    border: solid 1px black;  
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 10px;
@@ -127,4 +126,39 @@ flex: 50%;
 .dayjokes-div-section,.Testimonial-section{
   grid-column-gap: 20px;
 }
+.copyright-text{
+  margin-top: 1.2em;
+  border: solid 1px black;  
+}
+.mainbar {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 3em 0em 5em 0em;
+  /* border: solid 1px black;  */
+}
+.main-head {
+  /* width: 85%; */
+  font-size: 2.5em;
+  margin-top: 1em;
+ }
+ .main-content{ 
+  width: 60%;
+  margin-top: 1em;
+  /* border: solid 1px black;  */
+ } 
+ .hero-img{
+  margin:1em 0em;
+    /* border: solid 1px black;  */
+}
+.hero-pic{
+width: 23em;
+}
+
+
+
+
+/*  .main-section-btn{
+  justify-content: start;
+ }
+*/
  }
