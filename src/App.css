@@ -35,10 +35,6 @@
 .hero-pic{
 width: 20em;
 }
-.main-section-btn{
-  margin:0 auto;
-  width: 42%;
-}
 .dayjokes-div,.jokescategory-div,.Testimony{
   /* border: solid 1px black;   */
   background: white;
@@ -55,16 +51,16 @@ width: 20em;
 }
 }
 
-@media only screen and (min-width:768px){ 
-  .mobile{
+@media only screen and (min-width:481px){ 
+  /* .mobile{
     display: none;
-  }
+  } */
   .App{
-    padding:2em 6em;
+    padding:2em 3em;
   }
-.desktop{
+/* .desktop{
   display: flex;
-}
+} */
 .navlink {
   font-weight:500;
   color :black;
@@ -72,3 +68,54 @@ width: 20em;
 }
 
 }
+@media only screen and (min-width:510px){
+  .App{
+    padding:2em 5em;
+  }
+}
+
+
+@media only screen and (min-width:600px){
+  .mobile{
+    display: none;
+  }
+  .desktop{
+  display: flex;
+}
+.App{
+  padding:2em 5em;
+}
+.dayjokes-div-section,.JokesCategory,.Testimonial-section{
+    border: solid 1px black;  
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+}
+.mainbar {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.hero-img{
+flex: 50%;
+border: solid 1px black;  
+}
+ .main-section{
+  flex: 50%;
+  border: solid 1px black;  
+  justify-content: start;
+  text-align: start;
+ }
+
+ }
+ @media only screen and (min-width: 1000px){
+  .App{
+    padding:2em 7em;
+  }
+  .dayjokes-div-section,.JokesCategory,.Testimonial-section{
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+}
+.dayjokes-div-section,.Testimonial-section{
+  grid-column-gap: 20px;
+}
+ }

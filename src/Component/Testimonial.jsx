@@ -17,13 +17,22 @@ const Testimony = (props) => {
 const Testimonial = () => {
   return (
     <div className='Testimonial mb-[3em]'>
+
         <h1 className="Testimonial-head font-bold text-2xl text-center mt-[2em]">What Our Users Say </h1>
+        <div className='Testimonial-section'>
         <Testimony 
         src={textimonial1}
         Content=" Workdays  used to be very stressful till i stumbled on this website and it changed the way 
         i work now . I highly recommend it . "
         Author=" Says Ashley"
         />  
+           <Testimony 
+        src={textimonial1}
+        Content=" Workdays  used to be very stressful till i stumbled on this website and it changed the way 
+        i work now . I highly recommend it . "
+        Author=" Says Ashley"
+        />  
+    </div>
     </div>
   )
 }

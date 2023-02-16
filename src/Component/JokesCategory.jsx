@@ -18,8 +18,10 @@ const Category=(props)=>{
 
 const JokesCategory = () => {
   return (
-    <div className='JokesCategory '>
+    <div className='JokesCategory-section '>
+       
       <h1 className="jokescategory-head font-bold text-center text-2xl mb-[1em]"> JOKES IN  CATEGORY </h1>
+      <div className='JokesCategory '> 
         <Category 
         src={heart}
         content="Get love and Relationship jokes that could spice up your mood and that of your loved ones " 
@@ -36,8 +38,22 @@ const JokesCategory = () => {
         src={heart}
         content="Get love and Relationship jokes that could spice up your mood and that of your loved ones " 
         />
+           <Category 
+        src={heart}
+        content="Get love and Relationship jokes that could spice up your mood and that of your loved ones " 
+        />
+   
+ 
+         <Category 
+        src={heart}
+        content="Get love and Relationship jokes that could spice up your mood and that of your loved ones " 
+        />
+          <Category 
+        src={heart}
+        content="Get love and Relationship jokes that could spice up your mood and that of your loved ones " 
+        />
      
-  
+     </div>
     </div>
   )
 }
