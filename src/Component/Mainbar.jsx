@@ -13,7 +13,7 @@ const Mainbar = () => {
              You Giggle  And Laugh Blissfully  </p>
              <div className="main-section-btn flex justify-center">
                 <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)"
-                ,borderRadius:"8px",padding:"0.5em 1.5em"}} text="Get started"/> 
+                ,borderRadius:"8px",padding:"0.5em 1em"}} text="Get started"/> 
                 </div>
 
         </div>
