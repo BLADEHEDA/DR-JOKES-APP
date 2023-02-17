@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="Navbar-left text-2xl font-bold">JOKING-LY</div>
         <div className="nav-right"> 
         <FontAwesomeIcon icon={faBars} className="text-2xl mt-1"  onClick={togleNav} /></div> 
-        <ul className={`navlinks-mobile absolute rounded-lg pt-4 pb-7 ${displayNavbar}  `}>
+        <ul className={`navlinks-mobile  absolute rounded-lg pt-4 pb-7 ${displayNavbar}  `}>
           <div className="navlink-img"> <img src={close} alt="" className="close absolute" onClick={togleNav} /> </div>
           <li className="navlink text-lg">About</li>  
           <li className="navlink text-lg">Contact</li>  

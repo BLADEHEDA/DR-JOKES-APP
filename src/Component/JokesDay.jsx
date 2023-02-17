@@ -1,7 +1,7 @@
 import React from 'react'
 const Jokes=(props)=>{
     return(
-        <div className="jokes mb-[1em]">
+        <div className="jokes mb-[1em] lg:px-[2em]">
             <div className="jokes-emoji-div w-[3em] mb-2"> 
              <img src={props.src} alt="emoji-icon" className="jokes-emoji" /> </div>
             <p className="jokes-content text-center">  {props.jokeContent} </p>
