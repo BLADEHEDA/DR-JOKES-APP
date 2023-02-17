@@ -1,4 +1,6 @@
 import React from 'react'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 const Jokes=(props)=>{
     return(
         <div className="jokes mb-[1em] lg:px-[2em]">

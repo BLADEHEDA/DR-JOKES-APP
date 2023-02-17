@@ -49,6 +49,11 @@ width: 20em;
 .icon{
   padding-left: 1em;
 }
+.splider{
+   margin:-2.5em; 
+}
+
+
 }
 
 @media only screen and (min-width:481px){ 
