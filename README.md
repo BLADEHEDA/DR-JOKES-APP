@@ -8,5 +8,5 @@
 - A slider is implememed using splide js 
 -The Project is solely  a fron end project that uses an Api that would provided to us 
 On this link would you find important resources about courses https://mega.nz/folder/zBZFEA4L#HwSKxGAO-y8LDcSiYJx7hA/folder/WIw3CZDQ
-
+Ont this link would you find the resouces to to click up 
  
