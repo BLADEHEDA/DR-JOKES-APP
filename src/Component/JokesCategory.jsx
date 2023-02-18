@@ -111,7 +111,7 @@ const [showModals, setShowModals] = React.useState(false);
     </section>   
      
      </div>
-    {showModals?(<Modal showModals={showModals} setShowModals={setShowModals} />):null } 
+    {showModals?(<Modal  showModals={showModals} setShowModals={setShowModals}/>):null } 
 {/* the values written below os subjected to changes  */}
 <Splide aria-label="My Favorite Images" className='splider mobile' >
   <SplideSlide className='SplideSlide' >
