@@ -1,27 +1,19 @@
 import React from 'react'
 // import close from "../../images/icon-close.svg"
 
-const Modal = () => {
-    const [showModal, setShowModal] = React.useState(false);
+const Modal = ({showModals, setShowModals}) => {
+ 
   return (
     <div>
-          <>
-      <button
-        className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-        type="button"
-        onClick={() => setShowModal(true)}
-      >
-        Open regular modal
-      </button>
-      
-      {showModal ? (
-        <>
+
+
           <div className=" m-auto mt-[3em] fixed inset-0 z-50 outline-none focus:outline-none w-[50%] h-[80vh] overflow-y-auto" 
           >
-                  <button
+                  <button  
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() =>{ alert("yes boss")
+                       setShowModals()}}
                   >
                     Close
                   </button>
@@ -66,9 +58,6 @@ const Modal = () => {
             </div>
           </div>
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-        </>
-      ) : null}
-    </>
     </div>
   )
 }

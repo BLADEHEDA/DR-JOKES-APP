@@ -24,18 +24,13 @@ const Category=(props)=>{
     <div className="category-img-div flex justify-center ">
        <img src={props.src} alt="category-emoji" className="category-img w-[3em]" /> </div>
     <p className="category-content text-center text-base"> {props.content}   </p>
-    {/* <div className="category-btn flex justify-center mb-2">  
-    <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
-    ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
-    </div>        */}
-              
     </section>
      )
 }
 
 const JokesCategory = () => {
 // the logic of the modal and its functionalities 
-const [showModal, setShowModal] = React.useState(false);
+const [showModals, setShowModals] = React.useState(false);
 
   return (
     <div className='JokesCategory-section '>
@@ -48,8 +43,11 @@ const [showModal, setShowModal] = React.useState(false);
           src={heart}
           content="Get School related jokes that could spice up your mood and make you think of good old school days " 
           />
-            <div className="category-btn flex justify-center mb-2">  
-      <Button onClick={() => setShowModal(true)}
+            <div onClick={() => { alert("heart bro")  
+        setShowModals(!showModals)}}
+       className="category-btn flex justify-center mb-2">  
+      <Button 
+     
       style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px" 
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
       </div>  
@@ -113,7 +111,7 @@ const [showModal, setShowModal] = React.useState(false);
     </section>   
      
      </div>
-    {showModal?(<Modal/>):null } 
+    {showModals?(<Modal showModals={showModals} setShowModals={setShowModals} />):null } 
 {/* the values written below os subjected to changes  */}
 <Splide aria-label="My Favorite Images" className='splider mobile' >
   <SplideSlide className='SplideSlide' >
