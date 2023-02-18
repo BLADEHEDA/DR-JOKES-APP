@@ -7,4 +7,5 @@
 -Changes made on the main branch are not visible unless mered 
 - A slider is implememed using splide js 
 -The Project is solely  a fron end project that uses an Api that would provided to us 
+On this link would you find important resources about courses 
  
