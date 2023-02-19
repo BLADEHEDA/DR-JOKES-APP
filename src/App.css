@@ -52,13 +52,13 @@ width: 20em;
 .splider{
    margin:-2.5em; 
 }
-/* .modal-section{
+.jokes-prop-card{
   border:solid 1px black;
 
 }
-.modal-container{
-  border:solid 1px black;
-} */
+.jokes-prop-card{
+  background: rgb(229, 227, 227);
+}
 
 }
 
