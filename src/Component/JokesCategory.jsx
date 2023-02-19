@@ -43,8 +43,7 @@ const [showModals, setShowModals] = React.useState(false);
           src={heart}
           content="Get School related jokes that could spice up your mood and make you think of good old school days " 
           />
-            <div onClick={() => { alert("heart bro")  
-        setShowModals(!showModals)}}
+            <div onClick={() => {   setShowModals(!showModals)}}
        className="category-btn flex justify-center mb-2">  
       <Button 
      
