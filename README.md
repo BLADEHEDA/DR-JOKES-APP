@@ -6,6 +6,7 @@
 -On this project is a maon branch and a dev branch and most the work is dothe the dev branch
 -Changes made on the main branch are not visible unless mered 
 - A slider is implememed using splide js 
+-on this project exusts 2 branches main and Dev
 -The Project is solely  a fron end project that uses an Api that would provided to us 
 On this link would you find important resources about courses https://mega.nz/folder/zBZFEA4L#HwSKxGAO-y8LDcSiYJx7hA/folder/WIw3CZDQ
 Ont this link would you find the resouces to to click up https://share-docs.clickup.com/37475729/d/h/13qnch-504/2cfcea3307482d4
