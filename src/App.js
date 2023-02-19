@@ -5,6 +5,7 @@ import Navbar from './Component/Navbar/Navbar';
 import JokesCategory from './Component/JokesCategory';
 import Testimonial from './Component/Testimonial';
 import Footer from './Component/Footer';
+import Modal from './Component/Modal';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Mainbar/>
       <JokesDay/>
       <JokesCategory/>
+      {/* <Modal/> */}
       <Testimonial/>
       </section>
       <Footer/>
