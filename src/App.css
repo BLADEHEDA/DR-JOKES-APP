@@ -1,7 +1,7 @@
 /* the stles thatfollo are the styles for the navbar ftyles  */
 @media only screen and (min-width:1px){
 .mobile{
-  display: flex;
+  display:flex;
 }
 .App{
   padding:2em 1.5em;
@@ -35,10 +35,6 @@
 .hero-pic{
 width: 20em;
 }
-.main-section-btn{
-  margin:0 auto;
-  width: 42%;
-}
 .dayjokes-div,.jokescategory-div,.Testimony{
   background: white;
 }
@@ -52,18 +48,27 @@ width: 20em;
 .icon{
   padding-left: 1em;
 }
+.splider{
+   margin:-2.5em; 
 }
 
-@media only screen and (min-width:768px){ 
+.jokes-prop-card{
+  background: rgb(247, 245, 245);
+  /* border:solid 1px black; */
+}
+
+}
+
+@media only screen and (min-width:481px){ 
+  .App{
+    padding:2em 3em;
+  }
   .mobile{
+    display: flex;
+  }
+  .desktop{
     display: none;
   }
-  .App{
-    padding:2em 6em;
-  }
-.desktop{
-  display: flex;
-}
 .navlink {
   font-weight:500;
   color :black;
@@ -71,3 +76,89 @@ width: 20em;
 }
 
 }
+@media only screen and (min-width:510px){
+  .App{
+    padding:2em 5em;
+  }
+}
+
+
+@media only screen and (min-width:600px){
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    display: flex;
+  }
+
+.App{
+  padding:2em 5em;
+}
+.dayjokes-div-section,.JokesCategory,.Testimonial-section{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+}
+.mainbar {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 3em 0em 5em 0em;
+}
+.hero-img{
+flex: 50%;
+}
+ .main-section{
+  flex: 50%;
+  text-align: start;
+ }
+ .main-head {
+  width: 85%;
+  margin-top: 0.5em;
+ }
+ .main-section-btn{
+  justify-content: start;
+ }
+ .main-content{ 
+  width: 90%;
+  margin-top: 1em;
+ }
+
+ }
+ @media only screen and (min-width: 1000px){
+  .App{
+    padding:2em 7em;
+  }
+  .dayjokes-div-section,.JokesCategory,.Testimonial-section{
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+}
+.dayjokes-div-section,.Testimonial-section{
+  grid-column-gap: 20px;
+}
+.copyright-text{
+  margin-top: 1.2em;
+}
+.mainbar {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 3em 0em 5em 0em;
+}
+.main-head {
+  font-size: 2.7em;
+  margin-top: 1em;
+  line-height:1.2;
+ }
+ .main-content{ 
+  width: 60%;
+  margin-top: 1em;
+  line-height:1.6;
+ } 
+ .hero-img{
+  margin:0em 0em;
+    /* border: solid 1px black;   */
+}
+.hero-pic{
+width: 25em;
+}
+
+ }
