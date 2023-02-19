@@ -13,7 +13,7 @@ import '@splidejs/react-splide/css/skyblue';
 import '@splidejs/react-splide/css/sea-green';
 import '@splidejs/react-splide/css/core';
 
-import Modal from './Modal'
+import Modal from './Modal/Modal'
 
 
 const Category=(props)=>{

@@ -5,7 +5,7 @@ import Navbar from './Component/Navbar/Navbar';
 import JokesCategory from './Component/JokesCategory';
 import Testimonial from './Component/Testimonial';
 import Footer from './Component/Footer';
-import Modal from './Component/Modal';
+import Modal from './Component/Modal/Modal';
 
 function App() {
 

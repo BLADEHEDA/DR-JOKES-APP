@@ -8,15 +8,12 @@ const JokesProp = (props) => {
     // like states 
     const [like, setLike]=useState(0)
 const handleLike =()=>{
-    alert("like bro")
     setLike(like+1);
 }
     // like states 
     const [dislike, setDislike]=useState(0)
 const handleDislike =()=>{
-    alert("dislike bro")
     setDislike(dislike+1);
-    console.log( " The like number  is " + dislike);
 }
   return (
 

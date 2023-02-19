@@ -1,6 +1,6 @@
 import React from 'react'
-import JokesProp from './JokesProp'
-import emoji1 from "../images/65057-emoticon-signal-smiley-thumb-emoji-free-frame.png"
+import JokesProp from '../JokesProp'
+import emoji1 from "../../images/65057-emoticon-signal-smiley-thumb-emoji-free-frame.png"
 
 const Modal = ({showModals, setShowModals}) => {
   return (
