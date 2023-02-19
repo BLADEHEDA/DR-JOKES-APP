@@ -20,7 +20,7 @@ const handleDislike =()=>{
 }
   return (
 
-       <section className="jokes-prop-card  md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em] rounded-[10px] my-[1em]"> 
+       <section className="jokes-prop-card  md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em] rounded-[10px] mb-[2em]"> 
             <div className="prop-img-div flex justify-center ">
             <img src={props.src} alt="prop-emoji" className="category-img w-[3em]" /> </div>
             <p className="prop-title font-bold text-center "> {props.title} </p>
