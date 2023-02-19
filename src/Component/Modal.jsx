@@ -21,13 +21,16 @@ const Modal = ({showModals, setShowModals}) => {
   
         <div className="modal-prop-div h-[80vh]   overflow-y-auto bg-white shadow-lg "> 
         <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    I always felt like I could do anything. That’s the main
-                    thing people are controlled by! Thoughts- their perception
-                    of themselves! They're slowed down by their perception of
-                    themselves. If you're taught you can’t do anything, you
-                    won’t do anything. I was taught I could do everything.
-                  </p>
+        <JokesProp
+              title=" Laygh or die"
+               content=" I always felt like I could do anything. That’s the main
+               thing people are controlled by! Thoughts- their perception
+               of themselves! They're slowed down by their perception of
+               themselves. If you're taught you can’t do anything, you
+               won’t do anything. I was taught I could do everything."
+               author="Yaya the Great"
+               src={emoji1}
+               />
               <JokesProp
               title=" Laygh or die"
                content=" I always felt like I could do anything. That’s the main
@@ -38,13 +41,16 @@ const Modal = ({showModals, setShowModals}) => {
                author="Yaya the Great"
                src={emoji1}
                />
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    I always felt like I could do anything. That’s the main
-                    thing people are controlled by! Thoughts- their perception
-                    of themselves! They're slowed down by their perception of
-                    themselves. If you're taught you can’t do anything, you
-                    won’t do anything. I was taught I could do everything.
-                  </p>
+               <JokesProp
+              title=" Laygh or die"
+               content=" I always felt like I could do anything. That’s the main
+               thing people are controlled by! Thoughts- their perception
+               of themselves! They're slowed down by their perception of
+               themselves. If you're taught you can’t do anything, you
+               won’t do anything. I was taught I could do everything."
+               author="Yaya the Great"
+               src={emoji1}
+               />
                   <p className="my-4 text-slate-500 text-lg leading-relaxed">
                     I always felt like I could do anything. That’s the main
                     thing people are controlled by! Thoughts- their perception
