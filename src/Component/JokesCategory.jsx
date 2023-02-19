@@ -119,10 +119,13 @@ const [showModals, setShowModals] = React.useState(false);
           src={heart}
           content="Get School related jokes that could spice up your mood and make you think of good old school days " 
           />
-            <div className="category-btn flex justify-center mb-2">  
-      <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
+             <div onClick={() => {   setShowModals(!showModals)}}
+       className="category-btn flex justify-center mb-2">  
+      <Button 
+     
+      style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px" 
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
-      </div>  
+      </div> 
     </section>
   </SplideSlide>
   <SplideSlide>
