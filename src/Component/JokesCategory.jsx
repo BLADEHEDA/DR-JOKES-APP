@@ -26,7 +26,7 @@ const Category=(props)=>{
     return(
 
     <section className="jokes-category-card"> 
-    <div className="category-img-div flex justify-center ">
+    <div className="category-img-div m-auto w-[3em] ">
        <img src={props.src} alt="category-emoji" className="category-img w-[3em]" /> </div>
     <p className="category-content text-center text-base"> {props.content}   </p>
     </section>
