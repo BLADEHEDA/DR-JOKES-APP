@@ -17,6 +17,7 @@ import Modal from './Modal/Modal'
 import Modal2 from './Modal/Modal2'
 import Modal3 from './Modal/Modal3'
 import Modal4 from './Modal/Modal4'
+import Modal5 from './Modal/Modal5'
 import Modal6 from './Modal/Modal6'
 
 
@@ -111,7 +112,8 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={tech }
         content="Get Amazing Tech jokes that could spice up your mood and show you how a journey in tech is awesome " 
         /> 
-                 <div className="category-btn flex justify-center mb-2">  
+       <div onClick={() => {   setShowModals(!showModals)}}
+        className="category-btn flex justify-center mb-2">  
       <Button 
       style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
