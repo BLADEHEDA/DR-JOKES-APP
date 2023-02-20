@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1df31b94.css",
-    "main.js": "/static/js/main.9c8fd47c.js",
+    "main.js": "/static/js/main.78678e6b.js",
     "static/media/65057-emoticon-signal-smiley-thumb-emoji-free-frame.png": "/static/media/65057-emoticon-signal-smiley-thumb-emoji-free-frame.578836a1083479b10123.png",
     "static/media/23847-3-school-file.png": "/static/media/23847-3-school-file.53b869c7c897cc9d8555.png",
     "static/media/5-2-face-with-tears-of-joy-emoji-png.png": "/static/media/5-2-face-with-tears-of-joy-emoji-png.9d7d70d5c66401e6ae4c.png",
@@ -10,10 +10,10 @@
     "index.html": "/index.html",
     "static/media/icon-close.svg": "/static/media/icon-close.c390448669f3a8a4c4b2ada2f9938959.svg",
     "main.1df31b94.css.map": "/static/css/main.1df31b94.css.map",
-    "main.9c8fd47c.js.map": "/static/js/main.9c8fd47c.js.map"
+    "main.78678e6b.js.map": "/static/js/main.78678e6b.js.map"
   },
   "entrypoints": [
     "static/css/main.1df31b94.css",
-    "static/js/main.9c8fd47c.js"
+    "static/js/main.78678e6b.js"
   ]
 }
