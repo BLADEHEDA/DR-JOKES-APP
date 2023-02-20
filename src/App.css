@@ -51,10 +51,20 @@ width: 20em;
 .splider{
    margin:-2.5em; 
 }
-
 .jokes-prop-card{
   background: rgb(247, 245, 245);
   /* border:solid 1px black; */
+}
+.comment-section,.form-comment-div,.commetn-section {
+    border:solid 1px black;
+}
+.commetn-section{
+  border:solid 1px black;
+  text-align: center;
+}
+
+.form-btn-div{
+  border:solid 1px red;
 }
 
 }

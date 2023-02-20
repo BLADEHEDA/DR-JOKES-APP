@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faThumbsUp,faThumbsDown,faComment,faPlus} from '@fortawesome/free-solid-svg-icons'
+import Comment from "./Comment"
+
 
 
 const JokesProp = (props) => {
@@ -15,8 +17,13 @@ const handleLike =()=>{
 const handleDislike =()=>{
     setDislike(dislike+1);
 }
+// Hide and show the comment modal 
+const [comment ,setComment]=useState();
+const handleComment=()=>{
+    setComment(!comment)
+}
   return (
-
+<div>     
        <section className="jokes-prop-card  md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em] rounded-[10px] mb-[2em]"> 
             <div className="prop-img-div flex justify-center ">
             <img src={props.src} alt="prop-emoji" className="category-img w-[3em]" /> </div>
@@ -26,10 +33,13 @@ const handleDislike =()=>{
                 <div className="props-icons flex justify-evenly mt-7"> 
                     <div className="likes"> <FontAwesomeIcon icon={faThumbsUp} onClick={ handleLike} /> {like} </div>
                     <div className="dislike"><FontAwesomeIcon icon={faThumbsDown} onClick={ handleDislike} /> {dislike} </div>
-                    <div className="comments"> <FontAwesomeIcon icon={faComment} /></div>
+                    <div className="comments"> <FontAwesomeIcon icon={faComment} onClick={ handleComment} /></div>
                     <div className="add"> <FontAwesomeIcon icon={faPlus} /></div>
                 </div>
+
     </section>
+            { comment?<Comment/>:""}
+    </div>
 
   )
 }

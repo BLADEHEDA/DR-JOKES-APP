@@ -5,7 +5,8 @@ import Navbar from './Component/Navbar/Navbar';
 import JokesCategory from './Component/JokesCategory';
 import Testimonial from './Component/Testimonial';
 import Footer from './Component/Footer';
-import Modal from './Component/Modal/Modal';
+// import Modal3 from './Component/Modal/Modal3';
+
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       <Mainbar/>
       <JokesDay/>
       <JokesCategory/>
-      {/* <Modal/> */}
+      {/* <Modal3/> */}
       <Testimonial/>
       </section>
       <Footer/>
