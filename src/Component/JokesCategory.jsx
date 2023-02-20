@@ -16,6 +16,8 @@ import '@splidejs/react-splide/css/core';
 import Modal from './Modal/Modal'
 import Modal2 from './Modal/Modal2'
 import Modal3 from './Modal/Modal3'
+import Modal4 from './Modal/Modal4'
+import Modal6 from './Modal/Modal6'
 
 
 const Category=(props)=>{
@@ -85,7 +87,8 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={western }
         content="Get amazing jokes that originate from Africa that shows you how amazing of a place it is to live in " 
         />
-                 <div className="category-btn flex justify-center mb-2">  
+                 <div onClick={() => {   setShowModals(!showModals)}}
+                  className="category-btn flex justify-center mb-2">  
       <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
       </div>  
@@ -96,7 +99,8 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={fanily}
         content="Get family and Relationship jokes that could spice up your mood and that of your loved ones " 
         />
-                 <div className="category-btn flex justify-center mb-2">  
+                 <div onClick={() => {   setShowModals(!showModals)}}
+                 className="category-btn flex justify-center mb-2">  
       <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
       </div>  
@@ -119,6 +123,8 @@ const [showModals2, setShowModals2] = React.useState(false);
     {showModals?(<Modal  showModals={showModals} setShowModals={setShowModals}/>):null } 
     {showModals2?(<Modal2  showModals2={showModals2} setShowModals2={setShowModals2}/>):null } 
     {showModals?(<Modal3  showModals={showModals} setShowModals={setShowModals}/>):null } 
+    {showModals?(<Modal4  showModals={showModals} setShowModals={setShowModals}/>):null } 
+    {showModals?(<Modal6  showModals={showModals} setShowModals={setShowModals}/>):null } 
 
 {/* the values written below os subjected to changes  */}
 <Splide aria-label="My Favorite Images" className='splider mobile' >
