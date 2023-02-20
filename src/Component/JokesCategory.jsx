@@ -37,6 +37,10 @@ const JokesCategory = () => {
 // the logic of the modal and its functionalities 
 const [showModals, setShowModals] = React.useState(false);
 const [showModals2, setShowModals2] = React.useState(false);
+const [showModals3, setShowModals3] = React.useState(false);
+const [showModals4, setShowModals4] = React.useState(false);
+const [showModals6, setShowModals6] = React.useState(false);
+const [showModals5, setShowModals5] = React.useState(false);
 
   return (
     <div className='JokesCategory-section '>
@@ -49,7 +53,7 @@ const [showModals2, setShowModals2] = React.useState(false);
           src={heart}
           content="Get School related jokes that could spice up your mood and make you think of good old school days " 
           />
-            <div onClick={() => {   setShowModals(!showModals)}}
+            <div  onClick={() => { setShowModals(!showModals)}}
        className="category-btn flex justify-center mb-2">  
       <Button 
      
@@ -76,7 +80,7 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={african}
         content="Get amazing jokes that originate from western ends that shows you how amazing of a place it is to live in " 
         />
-                 <div onClick={() => {   setShowModals(!showModals)}}
+                 <div onClick={() => {   setShowModals3(!showModals3)}}
                  className="category-btn flex justify-center mb-2">  
       <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
@@ -88,7 +92,7 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={western }
         content="Get amazing jokes that originate from Africa that shows you how amazing of a place it is to live in " 
         />
-                 <div onClick={() => {   setShowModals(!showModals)}}
+                 <div onClick={() => {   setShowModals4(!showModals4)}}
                   className="category-btn flex justify-center mb-2">  
       <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
@@ -100,7 +104,7 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={fanily}
         content="Get family and Relationship jokes that could spice up your mood and that of your loved ones " 
         />
-                 <div onClick={() => {   setShowModals(!showModals)}}
+                 <div onClick={() => {   setShowModals5(!showModals5)}}
                  className="category-btn flex justify-center mb-2">  
       <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
@@ -112,7 +116,7 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={tech }
         content="Get Amazing Tech jokes that could spice up your mood and show you how a journey in tech is awesome " 
         /> 
-       <div onClick={() => {   setShowModals(!showModals)}}
+       <div onClick={() => {   setShowModals6(!showModals6)}}
         className="category-btn flex justify-center mb-2">  
       <Button 
       style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
@@ -124,9 +128,10 @@ const [showModals2, setShowModals2] = React.useState(false);
      {/* render the various modals  */}
     {showModals?(<Modal  showModals={showModals} setShowModals={setShowModals}/>):null } 
     {showModals2?(<Modal2  showModals2={showModals2} setShowModals2={setShowModals2}/>):null } 
-    {showModals?(<Modal3  showModals={showModals} setShowModals={setShowModals}/>):null } 
-    {showModals?(<Modal4  showModals={showModals} setShowModals={setShowModals}/>):null } 
-    {showModals?(<Modal6  showModals={showModals} setShowModals={setShowModals}/>):null } 
+    {showModals3?(<Modal3  showModals3={showModals3} setShowModals3={setShowModals3}/>):null } 
+    {showModals4?(<Modal4  showModals4={showModals4} setShowModals4={setShowModals4}/>):null } 
+    {showModals5?(<Modal5  showModals6={showModals5} setShowModals5={setShowModals5}/>):null } 
+    {showModals6?(<Modal6  showModals6={showModals6} setShowModals6={setShowModals6}/>):null } 
 
 {/* the values written below os subjected to changes  */}
 <Splide aria-label="My Favorite Images" className='splider mobile' >
@@ -151,7 +156,8 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={school }
         content="Get love and Relationship jokes that could spice up your mood and that of your loved ones " 
         />
-                 <div className="category-btn flex justify-center mb-2">  
+                 <div onClick={() => {   setShowModals2(!showModals2)}}
+                 className="category-btn flex justify-center mb-2">  
       <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
       </div>  
@@ -164,7 +170,8 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={african}
         content="Get amazing jokes that originate from western ends that shows you how amazing of a place it is to live in " 
         />
-                 <div className="category-btn flex justify-center mb-2">  
+                 <div onClick={() => {   setShowModals3(!showModals3)}}
+                 className="category-btn flex justify-center mb-2">  
       <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
       </div>  
@@ -176,7 +183,8 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={western }
         content="Get amazing jokes that originate from Africa that shows you how amazing of a place it is to live in " 
         />
-                 <div className="category-btn flex justify-center mb-2">  
+                 <div onClick={() => {   setShowModals4(!showModals4)}}
+                 className="category-btn flex justify-center mb-2">  
       <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
       </div>  
@@ -189,7 +197,8 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={fanily}
         content="Get family and Relationship jokes that could spice up your mood and that of your loved ones " 
         />
-                 <div className="category-btn flex justify-center mb-2">  
+                 <div onClick={() => {   setShowModals5(!showModals5)}}
+                 className="category-btn flex justify-center mb-2">  
       <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
       </div>  
@@ -201,7 +210,8 @@ const [showModals2, setShowModals2] = React.useState(false);
         src={tech }
         content="Get Amazing Tech jokes that could spice up your mood and show you how a journey in tech is awesome " 
         /> 
-                 <div className="category-btn flex justify-center mb-2">  
+                 <div onClick={() => {   setShowModals6(!showModals6)}}
+                  className="category-btn flex justify-center mb-2">  
       <Button style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"8px"
       ,padding:"0.3em 1em",margin:"0.5em 0em 0em 0em"}} text="View Jokes" /> 
       </div>  

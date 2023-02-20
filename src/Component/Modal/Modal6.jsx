@@ -3,15 +3,15 @@ import JokesProp from '../JokesProp'
 import emoji1 from "../../images/65057-emoticon-signal-smiley-thumb-emoji-free-frame.png"
 
 
-const Modal6 = ({showModals, setShowModals}) => {
+const Modal6 = ({showModals6, setShowModals6}) => {
   return (
     // <section className="modal-section w-[80%]  md:w-[60%] m-auto ">
     <section className="modal-section h-[60vh]  w-[80%]  md:w-[60%] m-auto inset-0 z-50 bg-white fixed mb-[13em] py-3 rounded-2xl">
              <div className="modal-head-section flex justify-between px-5 mb-3">
              <h3 className="text-2xl md:text-3xl font-semibold"> JOkes Category </h3>
                    <button className='text-2xl font-semibold text-red-500 "'
-                    onClick={() =>{ 
-                       setShowModals()}}
+                    onClick={() =>{ alert("it is modal6")
+                       setShowModals6()}}
                   >  X
                    </button>
                </div>
@@ -29,7 +29,7 @@ const Modal6 = ({showModals, setShowModals}) => {
                of themselves! They're slowed down by their perception of
                themselves. If you're taught you can’t do anything, you
                won’t do anything. I was taught I could do everything."
-               author="BLADE said "
+               author="BLADE Modal6"
                src={emoji1}
                />
            
