@@ -55,7 +55,7 @@ width: 20em;
   background: rgb(247, 245, 245);
   /* border:solid 1px black; */
 }
-<<<<<<< HEAD
+
 .comment-section,.form-comment-div,.commetn-section{
     background: rgb(247, 245, 245); 
 }
@@ -73,12 +73,12 @@ width: 20em;
 }
 .joke-input:focus {
   outline:none;
-=======
+}
 .comment-section,.form-comment-div,.commetn-section {
     /* border:solid 1px black; */
     background: rgb(247, 245, 245);
     margin-bottom: 1em;
->>>>>>> main
+
 }
 .commetn-section{
   /* border:solid 1px black; */
