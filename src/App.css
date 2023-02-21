@@ -55,17 +55,30 @@ width: 20em;
   background: rgb(247, 245, 245);
   /* border:solid 1px black; */
 }
-.comment-section,.form-comment-div,.commetn-section {
-    border:solid 1px black;
+.comment-section,.form-comment-div,.commetn-section{
+    background: rgb(247, 245, 245); 
+}
+.relatives{
+  background: rgb(247, 245, 245); 
+}
+
+.formmodal-section{
+  background: rgb(247, 245, 245); 
+}
+.joke-input {
+  border:solid 1px rgb(42, 40, 40);
+  margin-top:0.5em;
+  background: white; 
+}
+.joke-input:focus {
+  outline:none;
 }
 .commetn-section{
-  border:solid 1px black;
+  /* border:solid 1px black; */
   text-align: center;
 }
 
-.form-btn-div{
-  border:solid 1px red;
-}
+
 
 }
 
