@@ -22,8 +22,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
     // Track changes ogf the author
     const handleChangeAuthor =(e)=>{
       authotValue= e.target.value;
-        setAuhtor(authotValue);
-        
+        setAuhtor(authotValue);  
     }
     // Track changes of the Title
     const handleChangeTitle =(e)=>{
@@ -40,10 +39,30 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
       e.preventDefault();
   
     //  append the values to the array 
-    // if((Author.length && Title.length)>2 &&textArea.length>10 ){
-      if( Title.length>2){
 
- 
+    if((Author.length<2 && Title.length<2 && textArea.length<10) ){
+      setvalidTitle(!validTitle)
+      setvalidAuthor(!validAuthor)
+      setvalidvalidtextArea(!validtextArea )
+    }
+    else if(!(Author.length>2)){
+      setvalidAuthor(!validAuthor)
+      setvalidTitle()
+      setvalidvalidtextArea()
+    }
+   else if(!(Title.length>2)){
+     setvalidTitle(!validTitle)
+     setvalidAuthor()
+     setvalidvalidtextArea()
+    }
+    else if(!(textArea.length>10)) {
+     setvalidvalidtextArea(!validtextArea )
+     setvalidAuthor()
+     setvalidTitle()
+      }
+   
+    else if((Author.length && Title.length)>2 &&textArea.length>10 ){
+      if( Title.length>2 &&Author.length>2 && textArea.length>10){ 
     const newJoke= {
       id:Math.floor(Math.random()*10000),
       Author:Author,
@@ -58,11 +77,16 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
        setAuhtor("");
      setTitle("")
      settextArea("");
+    //  reset the values of the erros if valid 
+    setvalidAuthor()
+    setvalidTitle()
+    setvalidvalidtextArea()
+     setshowformModal()
+     alert(" Joke Added Thats Dope ")
     }
-    alert(" validate the forms")
-    setAuhtor(!Author);
-    setTitle(!Title)
-    settextArea(!textArea);
+  }
+ 
+
     }
 
 
@@ -81,7 +105,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         <div className="w-full form-element">   
         <input type="text" placeholder='Enter Your Name' onChange={handleChangeAuthor} value={Author } 
         className="joke-input  w-full p-2" /> 
-        {Author? <div className="errors">Enter a valid Name</div>:null   }
+        {validAuthor? <div className="errors text-sm text-red-600">Enter a valid Name</div>:null   }
         </div>
     </div>
     <div className="joke-title-div form-div mt-[1.5em]">
@@ -89,7 +113,9 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Jokes Auhtor</label>
         </div>
         <div>  
-        <input type="text" placeholder='Enter Your Joke Title' onChange={handleChangeTitle}  value={Title}  className="joke-input w-full p-2" />
+        <input type="text" placeholder='Enter Your Joke Title' onChange={handleChangeTitle}  value={Title} 
+         className="joke-input w-full p-2" />
+         { validTitle?<div className="errors text-sm text-red-600">Enter a valid JOke Title</div>:null   }
         </div>
     </div>
     <div className="joke-content-div form-div mt-[1.5em]">
@@ -98,6 +124,8 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         </div>
         <div>   
       <textarea name="content" className="joke-input w-full p-2" onChange={handletextArea} value={textArea} ></textarea>
+      { validtextArea ?<div className="errors text-sm text-red-600">Joke should be atleast 10 Characters</div>:null   }
+     
       </div>
       <div>   
       <Button  style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"5px" 

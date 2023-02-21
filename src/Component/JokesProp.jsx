@@ -26,7 +26,6 @@ const handleComment=()=>{
 // The code to show and hide show the form to add jokes 
 const [ showformModal,setshowformModal] = useState();
 const handleformModal=()=>{
-    alert("hello bro")
     setshowformModal(!showformModal)
 }
 
