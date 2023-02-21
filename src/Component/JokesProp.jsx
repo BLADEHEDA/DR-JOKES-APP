@@ -32,8 +32,8 @@ const handleformModal=()=>{
   return (
 <div>     
        <section className="jokes-prop-card  md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em] rounded-[10px] mb-[2em]"> 
-            <div className="prop-img-div flex justify-center ">
-            <img src={props.src} alt="prop-emoji" className="category-img w-[3em]" /> </div>
+            <div className="prop-img-div w-[3em] m-auto ">
+            <img src={props.src} alt="prop-emoji" className="category-img " /> </div>
             <p className="prop-title font-bold text-center "> {props.title} </p>
             <p className="prop-content text-center text-base my-2 "> {props.content}   </p>
             <p className="prop-author-content text-center font-bold ">{props.author} </p>

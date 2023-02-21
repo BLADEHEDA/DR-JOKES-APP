@@ -4,8 +4,8 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 const Jokes=(props)=>{
     return(
         <div className="jokes mb-[1em] lg:px-[2em]">
-            <div className="jokes-emoji-div w-[3em] mb-2"> 
-             <img src={props.src} alt="emoji-icon" className="jokes-emoji" /> </div>
+            <div className="jokes-emoji-div  mb-2 w-[3em]"> 
+             <img src={props.src} alt="emoji-icon " className="jokes-emoji " /> </div>
             <p className="jokes-content text-center">  {props.jokeContent} </p>
             <p className="jokes-author font-bold ">   {props.jokeAuthor} </p>
         </div>
