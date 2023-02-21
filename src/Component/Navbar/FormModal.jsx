@@ -40,6 +40,10 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
       e.preventDefault();
   
     //  append the values to the array 
+    // if((Author.length && Title.length)>2 &&textArea.length>10 ){
+      if( Title.length>2){
+
+ 
     const newJoke= {
       id:Math.floor(Math.random()*10000),
       Author:Author,
@@ -54,7 +58,11 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
        setAuhtor("");
      setTitle("")
      settextArea("");
-    
+    }
+    alert(" validate the forms")
+    setAuhtor(!Author);
+    setTitle(!Title)
+    settextArea(!textArea);
     }
 
 
@@ -71,7 +79,9 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         <label htmlFor="Author" className="author-label mt-[0.5em] text-sm p-2 md:text-lg  ">Author</label>
         </div>
         <div className="w-full form-element">   
-        <input type="text" placeholder='Enter Your Name' onChange={handleChangeAuthor} value={Author } className="joke-input  w-full p-2" />
+        <input type="text" placeholder='Enter Your Name' onChange={handleChangeAuthor} value={Author } 
+        className="joke-input  w-full p-2" /> 
+        {Author? <div className="errors">Enter a valid Name</div>:null   }
         </div>
     </div>
     <div className="joke-title-div form-div mt-[1.5em]">

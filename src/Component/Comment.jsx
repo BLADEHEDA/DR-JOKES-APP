@@ -6,7 +6,7 @@ const Comment = () => {
   // logic for the comment component 
 const[comments ,setComments]=useState([]);
 const [commentInput,setcommentInput]=useState("");
-const[errors,setErrors]= useState(false)
+const[errors,setErrors]= useState()
 // teack the changes of the input 
 let inputvalue
 const handleChange =(e)=>{
@@ -26,15 +26,17 @@ const handleSubmit =(e)=>{
     // Add the comment to the list of comments 
     const AddComments =[...comments , comment];
     setComments(AddComments)
-
+    setErrors()
     console.log(AddComments);
 setcommentInput("")
+
 
   }
   // incase he user"s input is invalid , validate the form 
   else if (!(commentInput.length>1 && commentInput.length <201)){
     console.log( "Enter somethining  valid " + commentInput.length);
-    setErrors(true)
+    setErrors(!errors)
+    setcommentInput("")
   
   }
 
@@ -59,7 +61,7 @@ return (
                     <FontAwesomeIcon icon={faPaperPlane} /> </button> </div>
         </form>
               {/* show the form error  */}
-              {errors?<div className="error">Enter valid character lendth  </div>:null}
+              {errors?<div className="error text-sm text-red-600">Enter valid character lendth  </div>:null}
     </section>
   )
 }
