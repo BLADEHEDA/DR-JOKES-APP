@@ -56,16 +56,16 @@ width: 20em;
   /* border:solid 1px black; */
 }
 .comment-section,.form-comment-div,.commetn-section {
-    border:solid 1px black;
+    /* border:solid 1px black; */
+    background: rgb(247, 245, 245);
+    margin-bottom: 1em;
 }
 .commetn-section{
-  border:solid 1px black;
+  /* border:solid 1px black; */
   text-align: center;
 }
 
-.form-btn-div{
-  border:solid 1px red;
-}
+
 
 }
 
