@@ -1,5 +1,8 @@
 import React from 'react'
 import textimonial1  from "../images/testimonial-1.jpg"
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Testimony = (props) => {
     return (
@@ -15,14 +18,24 @@ const Testimony = (props) => {
 
 //    ]
 const Testimonial = () => {
+  const settings = {
+    infinite: true,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    lazyLoad: true,
+    autoplay: true,
+  autoplaySpeed: 2000,
+   
+  };
   return (
-    <div className='Testimonial mb-[3em]'>
+    <section className='Testimonial mb-[3em]'>
 
         <h1 className="Testimonial-head font-bold text-2xl text-center mt-[2em]">What Our Users Say </h1>
         <p className="textimponial-contetn text-center">   What our users have to say about using  
         <span className="content-head font-bold  "> JOKING-LY</span></p>
                      
-        <div className='Testimonial-section'>
+        <section className='Testimonial-section desktop'>
         <div className="testimonial-div"> 
         <Testimony 
         src={textimonial1}
@@ -47,8 +60,36 @@ const Testimonial = () => {
         Author=" Says Ashley"
         /> 
         </div>
-    </div>
-    </div>
+    </section>
+    <section className='Testimonial-section monile'>
+    <Slider  {...settings} >
+    <div className="testimonial-div"> 
+        <Testimony 
+        src={textimonial1}
+        Content=" Workdays  used to be very stressful till i stumbled on this website and it changed the way 
+        i work now . I highly recommend it . "
+        Author=" Says Ashley"
+        /> 
+        </div> 
+         <div className="testimonial-div lg:mt-[2.5em]"> 
+        <Testimony 
+        src={textimonial1}
+        Content=" Workdays  used to be very stressful till i stumbled on this website and it changed the way 
+        i work now . I highly recommend it . "
+        Author=" Says Ashley"
+        /> 
+        </div>
+        <div className="testimonial-div    lg:block mt-[5em] "> 
+        <Testimony 
+        src={textimonial1}
+        Content=" Workdays  used to be very stressful till i stumbled on this website and it changed the way 
+        i work now . I highly recommend it . "
+        Author=" Says Ashley"
+        /> 
+        </div>
+        </Slider>
+        </section>
+    </section>
   )
 }
 
