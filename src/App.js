@@ -1,4 +1,4 @@
-// import { BrowserRouter,  Routes,Route,Link} from "react-router-dom";
+import { BrowserRouter,  Routes,Route,Link} from "react-router-dom";
 import './App.css';
 import JokesDay from './Component/JokesDay';
 import Mainbar from './Component/Mainbar';
@@ -13,8 +13,7 @@ import TestimoniMobile from './Component/TestimoniMobile';
 function App() {
 
   return (
-  
-    <section >
+    <BrowserRouter>  
       <section className="App"> 
       <Navbar/>
       <Mainbar/>
@@ -22,15 +21,10 @@ function App() {
        <div className="mobil md:hidden"><Carousel  />  </div>
        <JokesCategory/>
        <div className="desktop "> <Testimonial/> </div>
-       <div className=" md:hidden"> <TestimoniMobile/>  </div>
-      
-      
-     
-    
-    
+       <div className=" md:hidden"> <TestimoniMobile/>  </div>  
       </section>
       <Footer/> 
-    </section>    
+    </BrowserRouter>  
   );
 }
 
