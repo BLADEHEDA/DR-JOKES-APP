@@ -9,8 +9,6 @@ import Footer from './Component/Footer';
 // import Carousel from 'nuka-carousel/lib/carousel';
 import Carousel from './Component/Carousel';
 import TestimoniMobile from './Component/TestimoniMobile';
-// import FormModal from './Component/Navbar/FormModal';
-
 
 function App() {
 
