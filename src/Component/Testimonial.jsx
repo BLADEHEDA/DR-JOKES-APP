@@ -1,8 +1,5 @@
 import React from 'react'
 import textimonial1  from "../images/testimonial-1.jpg"
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Testimony = (props) => {
     return (
@@ -18,16 +15,7 @@ const Testimony = (props) => {
 
 //    ]
 const Testimonial = () => {
-  const settings = {
-    infinite: true,
-    dots: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    lazyLoad: true,
-    autoplay: true,
-  autoplaySpeed: 2000,
-   
-  };
+
   return (
     <section className='Testimonial mb-[3em]'>
 
@@ -35,7 +23,8 @@ const Testimonial = () => {
         <p className="textimponial-contetn text-center">   What our users have to say about using  
         <span className="content-head font-bold  "> JOKING-LY</span></p>
                      
-        <section className='Testimonial-section desktop'>
+        <section className='Testimonial-section mt-[2em]'>
+          
         <div className="testimonial-div"> 
         <Testimony 
         src={textimonial1}
@@ -61,36 +50,10 @@ const Testimonial = () => {
         /> 
         </div>
     </section>
-    <section className='Testimonial-section monile'>
-    <Slider  {...settings} >
-    <div className="testimonial-div"> 
-        <Testimony 
-        src={textimonial1}
-        Content=" Workdays  used to be very stressful till i stumbled on this website and it changed the way 
-        i work now . I highly recommend it . "
-        Author=" Says Ashley"
-        /> 
-        </div> 
-         <div className="testimonial-div lg:mt-[2.5em]"> 
-        <Testimony 
-        src={textimonial1}
-        Content=" Workdays  used to be very stressful till i stumbled on this website and it changed the way 
-        i work now . I highly recommend it . "
-        Author=" Says Ashley"
-        /> 
-        </div>
-        <div className="testimonial-div    lg:block mt-[5em] "> 
-        <Testimony 
-        src={textimonial1}
-        Content=" Workdays  used to be very stressful till i stumbled on this website and it changed the way 
-        i work now . I highly recommend it . "
-        Author=" Says Ashley"
-        /> 
-        </div>
-        </Slider>
-        </section>
+   
     </section>
   )
 }
 
 export default Testimonial
+
