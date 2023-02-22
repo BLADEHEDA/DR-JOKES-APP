@@ -5,6 +5,8 @@ import Navbar from './Component/Navbar/Navbar';
 import JokesCategory from './Component/JokesCategory';
 import Testimonial from './Component/Testimonial';
 import Footer from './Component/Footer';
+// import Carousel from 'nuka-carousel/lib/carousel';
+import Carousel from './Component/Carousel';
 // import FormModal from './Component/Navbar/FormModal';
 
 
@@ -16,9 +18,9 @@ function App() {
       <section className="App"> 
       <Navbar/>
       <Mainbar/>
-      <JokesDay/>
+      <div className="desktop"><JokesDay/></div>
+       <div className="mobil md:hidden"><Carousel  />  </div>
       <JokesCategory/>
-      {/* <FormModal/> */}
       <Testimonial/>
       </section>
       <Footer/>

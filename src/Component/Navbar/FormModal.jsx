@@ -91,7 +91,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
 
 
   return (
-    <section className="formmodal-section h-[60vh] py-1  w-[70%]  md:w-[35%] py-3   m-auto inset-0 z-50 bg-white fixed mb-[9em] rounded-xl">
+    <section className="formmodal-section h-[60vh] py-1  w-[75%]  md:w-[35%] py-3   m-auto inset-0 z-50 bg-white fixed mb-[9em] rounded-xl">
     <div className="modal-head-section1 text-center px-5 mb-3">
     <h3 className="text-2xl md:text-3xl font-semibold center">Add Jokes</h3>
 

@@ -31,7 +31,7 @@ const handleformModal=()=>{
 
   return (
 <div>     
-       <section className="jokes-prop-card  md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em] rounded-[10px] mb-[2em]"> 
+       <section className="jokes-prop-card   md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em] rounded-[10px] mb-[2em]"> 
             <div className="prop-img-div w-[3em] m-auto ">
             <img src={props.src} alt="prop-emoji" className="category-img " /> </div>
             <p className="prop-title font-bold text-center "> {props.title} </p>

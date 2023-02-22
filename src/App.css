@@ -84,9 +84,10 @@ width: 20em;
   /* border:solid 1px black; */
   text-align: center;
 }
-
-
-
+ 
+.tag {
+  text-align: center;
+}
 }
 
 @media only screen and (min-width:481px){ 
