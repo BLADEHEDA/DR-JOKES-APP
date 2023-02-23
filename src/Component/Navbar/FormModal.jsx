@@ -85,14 +85,13 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
      alert(" Joke Added Thats Dope ")
     }
   }
- 
 
     }
 
 
   return (
     <section className="formmodal-section h-[60vh] py-1  w-[75%]  md:w-[35%] py-3   m-auto inset-0 z-50 bg-white fixed mb-[9em] rounded-xl">
-    <div className="modal-head-section1 text-center px-5 mb-3">
+    <div className="modal-head-section1 text-center px-5 mb-1">
     <h3 className="text-2xl md:text-3xl font-semibold center">Add Jokes</h3>
 
       </div>
@@ -108,17 +107,27 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         {validAuthor? <div className="errors text-sm text-red-600">Enter a valid Name</div>:null   }
         </div>
     </div>
-    <div className="joke-title-div form-div mt-[1.5em]">
+    <div className="joke-title-div form-div mt-[.5em]">
     <div className=" mt-[0.5em]">  
-        <label htmlFor="Author" className="author-label text-sm md:text-lg">Jokes Auhtor</label>
+        <label htmlFor="Author" className="author-label text-sm md:text-lg">Author Email</label>
         </div>
         <div>  
-        <input type="text" placeholder='Enter Your Joke Title' onChange={handleChangeTitle}  value={Title} 
+        <input type="email" placeholder='Enter Your Email Adresss' onChange={handleChangeTitle}  value={Title} 
          className="joke-input w-full p-2" />
-         { validTitle?<div className="errors text-sm text-red-600">Enter a valid JOke Title</div>:null   }
+         { validTitle?<div className="errors text-sm text-red-600">Enter a valid Email Adresss</div>:null   }
         </div>
     </div>
-    <div className="joke-content-div form-div mt-[1.5em]">
+    <div className="joke-title-div form-div mt-[.5em]">
+    <div className=" mt-[0.5em]">  
+        <label htmlFor="Author" className="author-label text-sm md:text-lg">Jokes Punchline</label>
+        </div>
+        <div>  
+        <input type="text" placeholder='Enter Your Joke Joke Punchline' onChange={handleChangeTitle}  value={Title} 
+         className="joke-input w-full p-2" />
+         { validTitle?<div className="errors text-sm text-red-600">Enter a valid Joke Punchline</div>:null   }
+        </div>
+    </div>
+    <div className="joke-content-div form-div mt-[.5em]">
     <div>  
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Joke Content</label>
         </div>
@@ -129,7 +138,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
       </div>
       <div>   
       <Button  style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"5px" 
-      ,padding:"0.75em 1em",margin:"1em 0em 0em 0em",width:"100%" }} text="Add Jokes" />
+      ,padding:"0.75em 1em",margin:"0.5em 0em 2em 0em",width:"100%" }} text="Add Jokes" />
       </div>
     </div>
        </form>
