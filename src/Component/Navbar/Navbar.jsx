@@ -23,7 +23,7 @@ const Navbar = () => {
         </ul> 
       </div>
       <div className="navbar-desktop desktop justify-between">  
-      <div className="Navbar-left text-3xl font-bold ">JOKING-LY</div>
+      <div className="Navbar-left text-3xl font-bold ">JOKING-LY</div>    
       <div className="navbar-right">  
       <ul className="navlinks desktop flex">
           <li className="navlink text-xl ">About</li>  

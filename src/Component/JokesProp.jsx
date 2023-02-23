@@ -38,10 +38,10 @@ const handleformModal=()=>{
             <p className="prop-content text-center text-base my-2 "> {props.content}   </p>
             <p className="prop-author-content text-center font-bold ">{props.author} </p>
                 <div className="props-icons flex justify-evenly mt-7"> 
-                    <div className="likes"> <FontAwesomeIcon icon={faThumbsUp} onClick={ handleLike} /> {like} </div>
-                    <div className="dislike"><FontAwesomeIcon icon={faThumbsDown} onClick={ handleDislike} /> {dislike} </div>
-                    <div className="comments"> <FontAwesomeIcon icon={faComment} onClick={ handleComment} /></div>
-                    <div className="add"> <FontAwesomeIcon icon={faPlus} onClick={handleformModal}  /></div>
+                    <div className="likes cursor-pointer"> <FontAwesomeIcon icon={faThumbsUp} onClick={ handleLike} /> {like} </div>
+                    <div className="dislike cursor-pointer"><FontAwesomeIcon icon={faThumbsDown} onClick={ handleDislike} /> {dislike} </div>
+                    <div className="comments cursor-pointer"> <FontAwesomeIcon icon={faComment} onClick={ handleComment} /></div>
+                    <div className="add cursor-pointer"> <FontAwesomeIcon icon={faPlus} onClick={handleformModal}  /></div>
                 </div>
              
     </section>

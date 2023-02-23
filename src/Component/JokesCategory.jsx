@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect,useState } from 'react'
 import Button from './Button'
 import heart from "../images/icons8-heart-suit-48.png"  
 import school from "../images/23847-3-school-file.png" 
@@ -42,8 +43,53 @@ const [showModals4, setShowModals4] = React.useState(false);
 const [showModals6, setShowModals6] = React.useState(false);
 const [showModals5, setShowModals5] = React.useState(false);
 
+// states for teh modal1 search 
+const [data, setData] = useState();
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState(null);
+//  ?handle romance actions 
+const handleRomance=()=>{
+  handleRomanceFetch()
+  setShowModals(!showModals)
+
+}
+  // handle the Api fetch 
+  const handleRomanceFetch =()=>{
+    fetch(` https://api.jokes.digitalrenter.com/api/jokes`)
+    .then(res => res.json())
+    .then(
+      (results) => {
+        // setIsLoaded(true);
+        setData(results)
+        // console.log(data);
+        console.log(results);
+        console.log(results[0].punchline );
+        console.log(results[0].setup );
+        console.log(results[0].author.name);
+        console.log(data);
+        setData(results)
+        console.log(data);
+      },
+      (error) => {
+        // setIsLoaded(true);
+        // setError(error);
+      }
+    )
+ 
+  }
+
+
+
+  // the lines below are subkected to subsequent xhanges 
+useEffect(() => {
+  handleRomanceFetch()
+}, [])
+
   return (
     <div className='JokesCategory-section '>
+
+{/* trying to render the state here  */}
+      {/* <p>{ data} </p> */}
        
       <h1 className="jokescategory-head font-bold text-center text-2xl mb-[1em]"> JOKES IN  CATEGORY </h1>
       <div className='JokesCategory desktop '> 
@@ -53,7 +99,7 @@ const [showModals5, setShowModals5] = React.useState(false);
           src={heart}
           content="Get School related jokes that could spice up your mood and make you think of good old school days " 
           />
-            <div  onClick={() => { setShowModals(!showModals)}}
+            <div  onClick={handleRomance}
        className="category-btn flex justify-center mb-2">  
       <Button 
      
