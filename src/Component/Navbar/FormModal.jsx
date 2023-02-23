@@ -13,12 +13,13 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
     const[Author ,setAuhtor]  =useState("");
     const[Title,setTitle]=useState("");
     const[textArea ,settextArea]=useState("");
+    const [Email,setEmail]=useState("");
     // 
   // define the container array for the newjokes 
   const[newJOkes , setnewJOkes]=useState([])
 
     // the function below handles the behaviour of the input 
-    let authotValue , titleValue,textAreaValue;
+    let authotValue , titleValue,textAreaValue, EmailValue;
     // Track changes ogf the author
     const handleChangeAuthor =(e)=>{
       authotValue= e.target.value;
@@ -33,6 +34,11 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
     const handletextArea =(e)=>{
       textAreaValue = e.target.value
       settextArea(textAreaValue );
+    }
+    // Track the chenges of the Enail
+    const handlechangeEmail=(e)=>{
+      EmailValue=e.target.value
+      setEmail( EmailValue)
     }
 
     const handleSubmit=(e)=>{
@@ -67,7 +73,8 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
       id:Math.floor(Math.random()*10000),
       Author:Author,
       Title:Title,
-      textArea:textArea
+      textArea:textArea,
+      Email:Email
     }
     // add the new joke instance to an array 
     const addnewJOkes= [...newJOkes,newJoke ]
@@ -112,7 +119,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Author Email</label>
         </div>
         <div>  
-        <input type="email" placeholder='Enter Your Email Adresss' onChange={handleChangeTitle}  value={Title} 
+        <input type="email" placeholder='Enter Your Email Adresss' onChange={handlechangeEmail}  value={EmailValue} 
          className="joke-input w-full p-2" />
          { validTitle?<div className="errors text-sm text-red-600">Enter a valid Email Adresss</div>:null   }
         </div>

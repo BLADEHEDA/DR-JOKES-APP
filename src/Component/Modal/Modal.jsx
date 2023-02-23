@@ -54,7 +54,7 @@ const [error, setError] = useState(null);
                       <section className="Mapped-div-from Api">  
             {Data.map((data)=>{ const {id, punchline,setup}  = data ;
           return(
-            <div className="render-demos">
+            <div className="render-demos" key={id}>
           <JokesProp
                   title={punchline}
                   content={setup} 
