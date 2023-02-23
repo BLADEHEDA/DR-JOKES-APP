@@ -44,7 +44,7 @@ const [showModals6, setShowModals6] = React.useState(false);
 const [showModals5, setShowModals5] = React.useState(false);
 
 // states for teh modal1 search 
-const [Data, setData] = useState();
+const [Data, setData] = useState([]);
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState(null);
 //  ?handle romance actions 
@@ -61,32 +61,35 @@ const handleRomance=()=>{
       (results) => {
         // setIsLoaded(true);
         setData(results)
-        console.log(Data); //This line reurns to me undefined 
+        console.log( Data); //This line reurns to me an empty array this time 
         console.log(results);
-        console.log(results[0].punchline );
-        console.log(results[0].setup );
-        console.log(results[0].author.name);
+        // console.log(results[0].punchline );
+        // console.log(results[0].setup );
+        // console.log(results[0].author.name);
       },
-      
-      // (error) => {
-      //   // setIsLoaded(true);
-      //   // setError(error);
-      // }
     )
   }
 
-
-
   // the lines below are subkected to subsequent xhanges 
 useEffect(() => {
+  // UsingFetch() 
   handleRomanceFetch()
 }, [])
+useEffect(() => {
+  console.log(Data); 
+}, [])
+
 
   return (
     <div className='JokesCategory-section '>
 
-{/* trying to render the state here   but returns the*/}
-      <p>{ Data} </p>
+{/* trying to render the state here  but return nothing in its div*/}
+      {/* <p>{ Data} </p> */}
+      <p>This is the display zone
+          {Data.map(data => (
+            <li key={data.id}>{data.punchlinp}</li>
+          ))}
+        </p>
        
       <h1 className="jokescategory-head font-bold text-center text-2xl mb-[1em]"> JOKES IN  CATEGORY </h1>
       <div className='JokesCategory desktop '> 
