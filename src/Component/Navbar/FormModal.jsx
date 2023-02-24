@@ -14,10 +14,12 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
     const[Title,setTitle]=useState("");
     const[textArea ,settextArea]=useState("");
     const [Email,setEmail]=useState("");
-    const [select ,setSelect]= useState("");
+    const [select ,setSelect]= useState([]);
     // 
   // define the container array for the newjokes 
   const[newJOkes , setnewJOkes]=useState([])
+  // define integer names for your select tap 
+
 
     // the function below handles the behaviour of the input 
     let authotValue , titleValue,textAreaValue, EmailValue;
@@ -81,7 +83,8 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
       setup:textArea,
       authoer_name:Author,
       author_email:Email,
-      category_id:select,
+      // category_id:select,
+      category_id:parseInt(select)
        
     }
     // add the new joke instance to an array 
@@ -94,11 +97,15 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
          body: JSON.stringify({ 
           punchline:Title,
           setup:textArea,
-          authoer_name:Author,
+          author_name:Author,
           author_email:Email,
-          category_id:select,
+          // category_id:select,
+          category_id:parseInt(select)
          }),
-         headers: { 'Content-Type': 'application/json' },
+         headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
       })
          .then((res) => res.json())
          .then((newJOkes ) => {
