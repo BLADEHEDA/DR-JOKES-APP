@@ -84,6 +84,9 @@ width: 20em;
   /* border:solid 1px black; */
   text-align: center;
 }
+.select{
+    border:solid 1px black;
+}
  
 .tag {
   text-align: center;

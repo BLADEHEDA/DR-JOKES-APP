@@ -14,6 +14,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
     const[Title,setTitle]=useState("");
     const[textArea ,settextArea]=useState("");
     const [Email,setEmail]=useState("");
+    const [select ,setSelect]= useState();
     // 
   // define the container array for the newjokes 
   const[newJOkes , setnewJOkes]=useState([])
@@ -40,6 +41,11 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
       EmailValue=e.target.value
       setEmail( EmailValue)
     }
+    //Track changes of the Select 
+    const handlechangeSelect =(e)=>{
+      console.log(e.target.value)
+    setSelect(e.target.value)
+   }
 
     const handleSubmit=(e)=>{
       e.preventDefault();
@@ -67,14 +73,15 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
      setvalidTitle()
       }
    
-    else if((Author.length && Title.length)>2 &&textArea.length>10 ){
+    // else if((Author.length && Title.length)>2 &&textArea.length>10 ){
       if( Title.length>2 &&Author.length>2 && textArea.length>10){ 
     const newJoke= {
       id:Math.floor(Math.random()*10000),
       Author:Author,
       Title:Title,
       textArea:textArea,
-      Email:Email
+      Email:Email,
+      select:select 
     }
     // add the new joke instance to an array 
     const addnewJOkes= [...newJOkes,newJoke ]
@@ -91,16 +98,15 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
      setshowformModal()
      alert(" Joke Added Thats Dope ")
     }
-  }
+ 
 
     }
 
 
   return (
-    <section className="formmodal-section h-[60vh] py-1  w-[75%]  md:w-[35%] py-3   m-auto inset-0 z-50 bg-white fixed mb-[9em] rounded-xl">
-    <div className="modal-head-section1 text-center px-5 mb-1">
+    <section className="formmodal-section h-[60vh] py-1  w-[75%]  md:w-[35%] py-3   m-auto inset-0 z-50 bg-white fixed mb-[14em] rounded-xl">
+    <div className="modal-head-section1 text-center px-5 mb-0.5">
     <h3 className="text-2xl md:text-3xl font-semibold center">Add Jokes</h3>
-
       </div>
 
 <form className="relatives px-4 pb-10 md:px-7 " onSubmit={handleSubmit} >
@@ -114,8 +120,8 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         {validAuthor? <div className="errors text-sm text-red-600">Enter a valid Name</div>:null   }
         </div>
     </div>
-    <div className="joke-title-div form-div mt-[.5em]">
-    <div className=" mt-[0.5em]">  
+    <div className="joke-title-div form-div mt-[.3em]">
+    <div className=" mt-[0em]">  
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Author Email</label>
         </div>
         <div>  
@@ -124,8 +130,22 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
          { validTitle?<div className="errors text-sm text-red-600">Enter a valid Email Adresss</div>:null   }
         </div>
     </div>
-    <div className="joke-title-div form-div mt-[.5em]">
-    <div className=" mt-[0.5em]">  
+   
+        <div className="joke-title-div form-div mt-[.3em] ">
+    <label htmlFor="Author" className="author-label text-sm md:text-lg">Choose a category</label>
+  <select name="categories" className='select  w-full p-2 focus:outline-none ' onChange={ handlechangeSelect } > 
+  <option name="relationship" >Choose Option</option>
+    <option name="relationship" value={1}>Relationship Jokess</option>
+    <option value={2} >Education Jokes</option>
+    <option value={3}>Westernv Jokes</option>  
+    <option value={4}>Tech Jokes</option>
+    <option value={5}> African Jokes</option>
+    <option value={5}>Family JOkes</option>
+  </select>
+</div>
+
+    <div className="joke-title-div form-div mt-[0.3em]">
+    <div className=" mt-[0em]">  
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Jokes Punchline</label>
         </div>
         <div>  
@@ -134,7 +154,8 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
          { validTitle?<div className="errors text-sm text-red-600">Enter a valid Joke Punchline</div>:null   }
         </div>
     </div>
-    <div className="joke-content-div form-div mt-[.5em]">
+
+    <div className="joke-content-div form-div mt-[.3em]">
     <div>  
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Joke Content</label>
         </div>
