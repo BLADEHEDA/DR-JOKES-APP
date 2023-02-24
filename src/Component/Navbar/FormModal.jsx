@@ -14,7 +14,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
     const[Title,setTitle]=useState("");
     const[textArea ,settextArea]=useState("");
     const [Email,setEmail]=useState("");
-    const [select ,setSelect]= useState();
+    const [select ,setSelect]= useState("");
     // 
   // define the container array for the newjokes 
   const[newJOkes , setnewJOkes]=useState([])
@@ -77,20 +77,59 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
       if( Title.length>2 &&Author.length>2 && textArea.length>10){ 
     const newJoke= {
       id:Math.floor(Math.random()*10000),
-      Author:Author,
-      Title:Title,
-      textArea:textArea,
-      Email:Email,
-      select:select 
+      punchline:Title,
+      setup:textArea,
+      authoer_name:Author,
+      author_email:Email,
+      category_id:select,
+       
     }
     // add the new joke instance to an array 
-    const addnewJOkes= [...newJOkes,newJoke ]
+    const addnewJOkes= [...newJOkes,newJoke]
      setnewJOkes(addnewJOkes);
      console.log(addnewJOkes );
+    // THE lines below are subjected to changes 
+         fetch(`https://api.jokes.digitalrenter.com/api/jokes`, {
+         method: 'POST',
+         body: JSON.stringify({ 
+          punchline:Title,
+          setup:textArea,
+          authoer_name:Author,
+          author_email:Email,
+          category_id:select,
+         }),
+         headers: { 'Content-Type': 'application/json' },
+      })
+         .then((res) => res.json())
+         .then((newJOkes ) => {
+            // setPosts((posts) => [post, ...posts]);
+            // setTitle('');
+            // setBody('');
+             setnewJOkes([...newJOkes,newJoke]);
+             console.log("Below is what to be added to the Api");
+             console.log(newJOkes);
+            //  subjected to change 
+             setAuhtor("");
+             setTitle("")
+             settextArea("");
+             setEmail("")
+             setSelect("")
+         })
+        //  .catch((err) => {
+        //     console.log(err.message);
+        //  });
+        .catch(error => console.error(error)); 
+
+    // the lines subjected to changes ends here 
+
+
+
     //  reset the state back to its original 
        setAuhtor("");
      setTitle("")
      settextArea("");
+     setEmail("")
+     setSelect("")
     //  reset the values of the erros if valid 
     setvalidAuthor()
     setvalidTitle()
@@ -98,9 +137,9 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
      setshowformModal()
      alert(" Joke Added Thats Dope ")
     }
- 
 
     }
+
 
 
   return (
@@ -115,7 +154,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         <label htmlFor="Author" className="author-label mt-[0.5em] text-sm p-2 md:text-lg  ">Author</label>
         </div>
         <div className="w-full form-element">   
-        <input type="text" placeholder='Enter Your Name' onChange={handleChangeAuthor} value={Author } 
+        <input type="text" name="author_name" placeholder='Enter Your Name' onChange={handleChangeAuthor} value={Author } 
         className="joke-input  w-full p-2" /> 
         {validAuthor? <div className="errors text-sm text-red-600">Enter a valid Name</div>:null   }
         </div>
@@ -125,7 +164,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Author Email</label>
         </div>
         <div>  
-        <input type="email" placeholder='Enter Your Email Adresss' onChange={handlechangeEmail}  value={EmailValue} 
+        <input type="email"  name="author_email" placeholder='Enter Your Email Adresss' onChange={handlechangeEmail}  value={EmailValue} 
          className="joke-input w-full p-2" />
          { validTitle?<div className="errors text-sm text-red-600">Enter a valid Email Adresss</div>:null   }
         </div>
@@ -133,14 +172,14 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
    
         <div className="joke-title-div form-div mt-[.3em] ">
     <label htmlFor="Author" className="author-label text-sm md:text-lg">Choose a category</label>
-  <select name="categories" className='select  w-full p-2 focus:outline-none ' onChange={ handlechangeSelect } > 
+  <select name="categories"  className='select  w-full p-2 focus:outline-none ' onChange={ handlechangeSelect } > 
   <option name="relationship" >Choose Option</option>
-    <option name="relationship" value={1}>Relationship Jokess</option>
-    <option value={2} >Education Jokes</option>
-    <option value={3}>Westernv Jokes</option>  
-    <option value={4}>Tech Jokes</option>
-    <option value={5}> African Jokes</option>
-    <option value={5}>Family JOkes</option>
+    <option name="category_id" value={1}>Relationship Jokess</option>
+    <option  name="category_id" value={2} >Education Jokes</option>
+    <option   name="category_id"value={3}>Westernv Jokes</option>  
+    <option  name="category_id"value={4}>Tech Jokes</option>
+    <option  name="category_id"value={5}> African Jokes</option>
+    <option  name="category_id"value={5}>Family JOkes</option>
   </select>
 </div>
 
@@ -149,7 +188,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Jokes Punchline</label>
         </div>
         <div>  
-        <input type="text" placeholder='Enter Your Joke Joke Punchline' onChange={handleChangeTitle}  value={Title} 
+        <input type="text"  name="punchline" placeholder='Enter Your Joke Joke Punchline' onChange={handleChangeTitle}  value={Title} 
          className="joke-input w-full p-2" />
          { validTitle?<div className="errors text-sm text-red-600">Enter a valid Joke Punchline</div>:null   }
         </div>
@@ -160,7 +199,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Joke Content</label>
         </div>
         <div>   
-      <textarea name="content" className="joke-input w-full p-2" onChange={handletextArea} value={textArea} ></textarea>
+      <textarea name="setup" className="joke-input w-full p-2" onChange={handletextArea} value={textArea} ></textarea>
       { validtextArea ?<div className="errors text-sm text-red-600">Joke should be atleast 10 Characters</div>:null   }
      
       </div>
