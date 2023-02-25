@@ -47,7 +47,7 @@ return (
        
         { comments.map( (comment)=>{ const {id, commentInput}= comment 
             return <p className="commetn-section p-[1em] " key={id}>
-              <div className="comment-div w-[10%]">  {commentInput}  </div></p>  
+              <div className="comment-div w-[70%] overflow-hidden">  {commentInput}  </div></p>  
       }  )
         }                
         

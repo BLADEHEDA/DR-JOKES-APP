@@ -84,7 +84,7 @@ const handleRomance=()=>{
    <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
          <Category 
         src={african}
-        content="Get amazing jokes that originate from western ends that shows you how amazing of a place it is to live in " 
+        content="Get amazing jokes that originate from Africa that shows you how amazing of a place it is to live in " 
         />
                  <div onClick={() => {   setShowModals3(!showModals3)}}
                  className="category-btn flex justify-center mb-2">  
@@ -96,7 +96,7 @@ const handleRomance=()=>{
 <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
            <Category 
         src={western }
-        content="Get amazing jokes that originate from Africa that shows you how amazing of a place it is to live in " 
+        content="Get amazing jokes that originate from western ends that shows you how amazing of a place it is to live in " 
         />
                  <div onClick={() => {   setShowModals4(!showModals4)}}
                   className="category-btn flex justify-center mb-2">  

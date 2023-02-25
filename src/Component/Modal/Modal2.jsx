@@ -1,11 +1,11 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
 import JokesProp from '../JokesProp'
-import emoji1 from "../../images/65057-emoticon-signal-smiley-thumb-emoji-free-frame.png"
+import emoji1 from "../../images/6-2-angel-blushing-smile-emoji-png.png"
 
 
 const Modal2 = ({showModals2, setShowModals2}) => {
-    // states for teh modal1 search 
+ // states for teh Api data fetch 
 const [Data, setData] = useState([]);
 // handle the Api fetch 
 const handleRomanceFetch =()=>{
@@ -42,16 +42,6 @@ return(
       <div className="modal-container  ">
         <div className="modal-prop-div h-[80vh]   overflow-y-auto bg-white shadow-lg "> 
         <div className="relative p-6 flex-auto">
-        {/* <JokesProp
-              title=" Laugh or die"
-               content=" I always felt like I could do anything. That’s the main
-               thing people are controlled by! Thoughts- their perception
-               of themselves! They're slowed down by their perception of
-               themselves. If you're taught you can’t do anything, you
-               won’t do anything. I was taught I could do everything."
-               author="Becca bram"
-               src={emoji1}
-               /> */}
           {/* the lines below are mapped from the api so are subjected to changes  */}
           <section className="Mapped-div-from Api">  
             {Data.map((data)=>{ const {id, punchline,setup}  = data ;
@@ -67,7 +57,7 @@ return(
           )
           })}
         </section>
-           
+           {/* the jokes below are manually Typed JOkes */}
               <JokesProp
               title=" Laugh or die"
                content=" I always felt like I could do anything. That’s the main
