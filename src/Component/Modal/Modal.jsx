@@ -7,16 +7,14 @@ import emoji1 from "../../images/65057-emoticon-signal-smiley-thumb-emoji-free-f
 const Modal = ({showModals, setShowModals}) => {
   // states for teh modal1 search 
 const [Data, setData] = useState([]);
-const [error, setError] = useState(null);
-  // The lines below are the subjected to chenges 
     // handle the Api fetch 
     const handleRomanceFetch =()=>{
       fetch(` https://api.jokes.digitalrenter.com/api/jokes`)
       .then(res => res.json())
       .then(
         (results) => {
+          console.log(results);
           setData(results)
-          console.log( Data); 
         },
       )
     }
@@ -24,9 +22,9 @@ const [error, setError] = useState(null);
     handleRomanceFetch()
   }, [])
   // this second use effect is to catch any changes done on the state found inn the  depemdency array 
-  useEffect(() => {
-    console.log(Data); 
-  }, [Data])
+  // useEffect(() => {
+  //   console.log(Data); 
+  // }, [Data])
   
   if(Data.length===0){
     return(
@@ -50,7 +48,7 @@ const [error, setError] = useState(null);
         <div className="modal-prop-div h-[80vh]   overflow-y-auto bg-white shadow-lg "> 
         <div className="relative p-6 flex-auto">
                       {/* the lines below are mapped from the api so are subjected to changes  */}
-                      <section className="Mapped-div-from Api">  
+           <section className="Mapped-div-from Api">  
             {Data.map((data)=>{ const {id, punchline,setup}  = data ;
           return(
             <div className="render-demos" key={id}>
