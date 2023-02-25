@@ -83,7 +83,6 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
       setup:textArea,
       authoer_name:Author,
       author_email:Email,
-      // category_id:select,
       category_id:parseInt(select)
        
     }
@@ -99,7 +98,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
           setup:textArea,
           author_name:Author,
           author_email:Email,
-          // category_id:select,
+
           category_id:parseInt(select)
          }),
          headers: {
@@ -109,9 +108,7 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
       })
          .then((res) => res.json())
          .then((newJOkes ) => {
-            // setPosts((posts) => [post, ...posts]);
-            // setTitle('');
-            // setBody('');
+            // Add the body body of the to the pst request by means of spread
              setnewJOkes([...newJOkes,newJoke]);
              console.log("Below is what to be added to the Api");
              console.log(newJOkes);
@@ -122,22 +119,10 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
              setEmail("")
              setSelect("")
          })
-        //  .catch((err) => {
-        //     console.log(err.message);
-        //  });
-        .catch(error => console.error(error)); 
-
-    // the lines subjected to changes ends here 
-
-
-
-    //  reset the state back to its original 
-       setAuhtor("");
-     setTitle("")
-     settextArea("");
-     setEmail("")
-     setSelect("")
-    //  reset the values of the erros if valid 
+         .catch((err) => {
+            console.log(err.message);
+         });
+    //  reset the values of the Validatee-erros if valid 
     setvalidAuthor()
     setvalidTitle()
     setvalidvalidtextArea()

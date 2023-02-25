@@ -78,19 +78,21 @@ width: 20em;
     /* border:solid 1px black; */
     background: rgb(247, 245, 245);
     margin-bottom: 1em;
-
 }
 .commetn-section{
-  /* border:solid 1px black; */
   text-align: center;
 }
-.select{
+/* .select{
     border:solid 1px black;
-}
+} */
  
 .tag {
   text-align: center;
 }
+.loading-modal {
+  border:solid 1px black;
+}
+
 }
 
 @media only screen and (min-width:481px){ 

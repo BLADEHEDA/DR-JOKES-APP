@@ -21,7 +21,6 @@ const [error, setError] = useState(null);
       )
     }
   useEffect(() => {
-    // UsingFetch() 
     handleRomanceFetch()
   }, [])
   // this second use effect is to catch any changes done on the state found inn the  depemdency array 
@@ -31,7 +30,7 @@ const [error, setError] = useState(null);
   
   if(Data.length===0){
     return(
-      <div> LOADING....</div>
+      <div className='h-[60vh] loading-modal w-[80%] text-center bg-white text-3xl md:w-[30%] h-[25vh]  m-auto inset-0 z-50 fixed  py-[2em] '> LOADING....</div>
     ) 
     } 
 
