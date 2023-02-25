@@ -24,7 +24,7 @@ const handleSubmit =(e)=>{
     };
 
     // Add the comment to the list of comments 
-    const AddComments =[...comments , comment];
+    const AddComments =[comment,...comments];
     setComments(AddComments)
     setErrors()
     console.log(AddComments);
@@ -46,8 +46,8 @@ return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>
        
         { comments.map( (comment)=>{ const {id, commentInput}= comment 
-            return <p className="commetn-section p-[1em] " key={id}>
-              <div className="comment-div w-[70%] overflow-hidden">  {commentInput}  </div></p>  
+            return <p className="commetn-section p-[0.75em] " key={id}>
+              <div className="comment-div w-[100%] overflow-hidden">  {commentInput}  </div></p>  
       }  )
         }                
         

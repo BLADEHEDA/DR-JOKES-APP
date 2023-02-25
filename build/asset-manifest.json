@@ -1,11 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.142c89a1.css",
-    "main.js": "/static/js/main.a4978232.js",
+    "main.css": "/static/css/main.c27351a1.css",
+    "main.js": "/static/js/main.4c2a19b6.js",
+    "static/media/65023-thought-thinking-emoji-free-hq-image.png": "/static/media/65023-thought-thinking-emoji-free-hq-image.b75f2f06e46d3fa8a8cb.png",
     "static/media/65057-emoticon-signal-smiley-thumb-emoji-free-frame.png": "/static/media/65057-emoticon-signal-smiley-thumb-emoji-free-frame.578836a1083479b10123.png",
     "static/media/23847-3-school-file.png": "/static/media/23847-3-school-file.53b869c7c897cc9d8555.png",
     "static/media/5-2-face-with-tears-of-joy-emoji-png.png": "/static/media/5-2-face-with-tears-of-joy-emoji-png.9d7d70d5c66401e6ae4c.png",
+    "static/media/65031-emoticon-whatsapp-sticker-emoji-free-download-png-hq.png": "/static/media/65031-emoticon-whatsapp-sticker-emoji-free-download-png-hq.28c2ca6cc3384b7d94f3.png",
+    "static/media/94437-emoticon-of-smiley-dota-defense-fortnite-ancients_800x800.png": "/static/media/94437-emoticon-of-smiley-dota-defense-fortnite-ancients_800x800.6d5b7dab4ded4dd84db5.png",
+    "static/media/6-2-angel-blushing-smile-emoji-png.png": "/static/media/6-2-angel-blushing-smile-emoji-png.5b332b5367e26edc9069.png",
     "static/media/holidays-friends-having-fun-at-the-party.png": "/static/media/holidays-friends-having-fun-at-the-party.d58ae3be8f0991c5f000.png",
+    "static/media/69319-life-finance-icons-agent-health-social-insurance.png": "/static/media/69319-life-finance-icons-agent-health-social-insurance.ed6f7ad08ed9e48d5ce3.png",
     "static/media/2-2-grinning-face-emoji-png.png": "/static/media/2-2-grinning-face-emoji-png.415fdd83b85ed798cb4f.png",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -13,11 +18,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "static/media/icon-close.svg": "/static/media/icon-close.c390448669f3a8a4c4b2ada2f9938959.svg",
-    "main.142c89a1.css.map": "/static/css/main.142c89a1.css.map",
-    "main.a4978232.js.map": "/static/js/main.a4978232.js.map"
+    "main.c27351a1.css.map": "/static/css/main.c27351a1.css.map",
+    "main.4c2a19b6.js.map": "/static/js/main.4c2a19b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.142c89a1.css",
-    "static/js/main.a4978232.js"
+    "static/css/main.c27351a1.css",
+    "static/js/main.4c2a19b6.js"
   ]
 }

@@ -74,14 +74,22 @@ width: 20em;
 .joke-input:focus {
   outline:none;
 }
-.comment-section,.form-comment-div,.commetn-section {
-    /* border:solid 1px black; */
+.commetn-section {
+    border:solid 1px black;
     background: rgb(247, 245, 245);
     margin-bottom: 1em;
 }
-.commetn-section{
-  text-align: center;
+.comment-section{
+  margin-bottom: 0.2em;
+  border:solid 1px black;
 }
+.form-comment-div{
+  border:solid 1px black;
+}
+
+/* .commetn-section{
+  text-align: center;
+} */
 /* .select{
     border:solid 1px black;
 } */

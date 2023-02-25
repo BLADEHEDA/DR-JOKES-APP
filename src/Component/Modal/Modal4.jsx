@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
 import JokesProp from '../JokesProp'
-import emoji1 from "../../images/65057-emoticon-signal-smiley-thumb-emoji-free-frame.png"
+import emoji1 from "../../images/94437-emoticon-of-smiley-dota-defense-fortnite-ancients_800x800.png"
 
 
 const Modal4= ({showModals4, setShowModals4}) => {

@@ -3,7 +3,6 @@ import { useEffect,useState } from 'react'
 import JokesProp from '../JokesProp'
 import emoji1 from "../../images/65057-emoticon-signal-smiley-thumb-emoji-free-frame.png"
 
-
 const Modal3 = ({showModals3, setShowModals3}) => {
   // states for teh Api data fetch 
 const [Data, setData] = useState([]);
