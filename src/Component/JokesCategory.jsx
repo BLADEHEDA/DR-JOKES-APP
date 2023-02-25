@@ -145,7 +145,7 @@ const handleRomance=()=>{
   <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
           <Category 
           src={heart}
-          content="Get School related jokes that could spice up your mood and make you think of good old school days " 
+          content="Get love and Relationship jokes that could spice up your mood and that of your loved ones "
           />
              <div onClick={() => {   setShowModals(!showModals)}}
        className="category-btn flex justify-center mb-2">  
@@ -160,7 +160,7 @@ const handleRomance=()=>{
   <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
         <Category 
         src={school }
-        content="Get love and Relationship jokes that could spice up your mood and that of your loved ones " 
+        content="Get School related jokes that could spice up your mood and make you think of good old school days "  
         />
                  <div onClick={() => {   setShowModals2(!showModals2)}}
                  className="category-btn flex justify-center mb-2">  
