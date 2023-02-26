@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useEffect,useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faThumbsUp,faThumbsDown,faComment,faPlus} from '@fortawesome/free-solid-svg-icons'
 import Comment from "./Comment"
@@ -22,11 +22,29 @@ const handleDislike =()=>{
 const [comment ,setComment]=useState();
 const handleComment=()=>{
     setComment(!comment)
+    // the lines bwlow are sub5jected to changes 
+    // const [Data, setData] = useState([]);
+    // handle the Api fetch to getall the comments 
+    // const handleRomanceFetch =()=>{
+      fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id={id}`)
+      .then(res => res.json())
+      .then(
+        (results) => {
+          console.log(results);
+          setComment(results)
+        },
+      )
+    // }
+    // end of subject to changes line 
 }
+useEffect(() => {
+    handleComment()
+  }, [])
 // The code to show and hide show the form to add jokes 
 const [ showformModal,setshowformModal] = useState();
 const handleformModal=()=>{
     setshowformModal(!showformModal)
+    // implement the get request for the jokes per joke id 
 }
 
   return (

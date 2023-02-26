@@ -20,27 +20,49 @@ const handleSubmit =(e)=>{
     console.log(commentInput, commentInput.length);
     const comment = {  
       id:Math.floor(Math.random()*10000),
-      commentInput:commentInput 
+      message:commentInput,
     };
-
-    // Add the comment to the list of comments 
+  // Add the comment to the list of comments 
     const AddComments =[comment,...comments];
     setComments(AddComments)
     setErrors()
     console.log(AddComments);
-setcommentInput("")
+// setcommentInput("");
 
-
+// The lines below are subjected to changes 
+// add comments on a joke 
+     fetch(`https://api.jokes.digitalrenter.com/api/comments`, {
+     method: 'POST',
+     body: JSON.stringify({ 
+    id:Math.floor(Math.random()*10000),
+    message:commentInput,
+     }),
+     headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    
+  })
+  setcommentInput("")
+     .then((res) => res.json())
+     .then((comments) => {
+         setComments([comment,...comments])
+        //  subjected to change 
+    
+     })
+     .catch((err) => {
+        console.log(err.message);
+     });
+//the end of the line that was subjected ti changes 
   }
   // incase he user"s input is invalid , validate the form 
   else if (!(commentInput.length>1 && commentInput.length <201)){
     console.log( "Enter somethining  valid " + commentInput.length);
     setErrors(!errors)
     setcommentInput("")
-  
   }
-
 }
+ 
 
 return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>
