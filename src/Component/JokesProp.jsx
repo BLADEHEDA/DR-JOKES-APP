@@ -41,7 +41,7 @@ useEffect(() => {
 // catch any available errors 
 useEffect(() => {
     console.log(comment);
-  }, [])
+  }, [comment])
 
 
 
