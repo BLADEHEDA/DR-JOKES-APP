@@ -1,5 +1,6 @@
 import React from 'react'
 import textimonial1  from "../images/testimonial-1.jpg"
+import { Fade ,Roll, Slide,JackInTheBox} from "react-awesome-reveal";
 
 const Testimony = (props) => {
     return (
@@ -22,7 +23,7 @@ const Testimonial = () => {
         <h1 className="Testimonial-head font-bold text-2xl text-center mt-[2em]">What Our Users Say </h1>
         <p className="textimponial-contetn text-center">   What our users have to say about using  
         <span className="content-head font-bold  "> JOKING-LY</span></p>
-                     
+        <Slide>        
         <section className='Testimonial-section mt-[2em]'>
           
         <div className="testimonial-div"> 
@@ -50,7 +51,7 @@ const Testimonial = () => {
         /> 
         </div>
     </section>
-   
+    </Slide>   
     </section>
   )
 }

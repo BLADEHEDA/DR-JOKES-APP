@@ -1,6 +1,6 @@
 import React from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { Fade ,Roll, Slide} from "react-awesome-reveal";
+import { Fade ,Roll, Slide,JackInTheBox} from "react-awesome-reveal";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

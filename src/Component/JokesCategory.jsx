@@ -7,12 +7,10 @@ import african from "../images/icons8-africa-64.png"
 import western from "../images/icons8-cowgirl.png" 
 import fanily from "../images/icons8-family-16.png"  
 import tech from "../images/icons8-network-64.png" 
+import { Fade ,Roll, Slide,JackInTheBox} from "react-awesome-reveal";
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
-// Default theme
+// Default theme 
 import '@splidejs/react-splide/css';
-import '@splidejs/react-splide/css/skyblue';
-import '@splidejs/react-splide/css/sea-green';
-import '@splidejs/react-splide/css/core';
 
 import Modal from './Modal/Modal'
 import Modal2 from './Modal/Modal2'
@@ -51,6 +49,7 @@ const handleRomance=()=>{
   return (
     <div className='JokesCategory-section '> 
       <h1 className="jokescategory-head font-bold text-center text-2xl mb-[1em]"> JOKES IN  CATEGORY </h1>
+      <JackInTheBox> 
       <div className='JokesCategory desktop '> 
 
       <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
@@ -130,6 +129,7 @@ const handleRomance=()=>{
       </div>  
     </section>    
      </div>
+     </JackInTheBox>
 
      {/* render the various modals  */}
     {showModals?(<Modal  showModals={showModals} setShowModals={setShowModals}/>):null } 
