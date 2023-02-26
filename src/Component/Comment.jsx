@@ -20,7 +20,7 @@ const handleSubmit =(e)=>{
     console.log(commentInput, commentInput.length);
     const comment = {  
       id:Math.floor(Math.random()*10000),
-      message:commentInput,
+      commentInput:commentInput,
     };
   // Add the comment to the list of comments 
     const AddComments =[comment,...comments];
@@ -67,12 +67,20 @@ const handleSubmit =(e)=>{
 return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>
        
-        { comments.map( (comment)=>{ const {id, commentInput}= comment 
+        {/* { comments.map( (comment)=>{ const {id, commentInput}= comment 
             return <section className="commetn-section p-[0.75em] " key={id}>
-              <div className="comment-div w-[100%] overflow-hidden">  {commentInput}  </div></section>  
+              <div className="comment-div w-[100%] overflow-hidden">  {commentInput}  </div>
+              </section>  
       }  )
-        }                
-        
+        }  */}
+            {/* subjected to changes  */}
+            { comments.map( (comment)=>{ const {id, message}= comment 
+            return <section className="commetn-section p-[0.75em] " key={id}>
+              <div className="comment-div w-[100%] overflow-hidden">  {message}  </div>
+              </section>  
+      }  )
+        } 
+
         <form className="comment-actions flex mt-[2em]" onSubmit={handleSubmit }>
             <div className="form-comment-div basis-[90%] "> 
              <input type="text" className="comment-input w-full" placeholder="Enter a comment"

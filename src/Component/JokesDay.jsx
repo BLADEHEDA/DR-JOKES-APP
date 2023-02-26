@@ -1,5 +1,6 @@
 import React from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Fade ,Roll, Slide} from "react-awesome-reveal";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -42,6 +43,7 @@ const settings = {
    
   };
   return (
+    <Slide> 
     <div className='dayjokes mb-[4em] '>
       <p className="dayjokes-head text-2xl font-bold text-center mt-[1em] text-center"> JOKES OF THE DAY</p>
         <div className="dayjokes-div-section  ">
@@ -56,6 +58,7 @@ const settings = {
        })   }
         </div>
     </div>
+    </Slide>
   )
 }
 
