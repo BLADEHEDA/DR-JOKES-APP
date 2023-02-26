@@ -136,10 +136,12 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
 
   return (
     <section className="formmodal-section h-[60vh] py-1  w-[75%]  md:w-[35%] py-3   m-auto inset-0 z-50 bg-white fixed mb-[14em] rounded-xl">
-    <div className="modal-head-section1 text-center px-5 mb-0.5">
+    <div className="modal-head-section1 text-center px-5 mb-0.5"     onClick={() =>{ 
+                      setshowformModal()}}
+                  >  >
     <h3 className="text-2xl md:text-3xl font-semibold center">Add Jokes</h3>
-      </div>
 
+      </div>
 <form className="relatives px-4 pb-10 md:px-7 " onSubmit={handleSubmit} >
     <div className="Author-div form-div ">
         <div className=" mt-[0.5em]">  

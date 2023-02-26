@@ -68,8 +68,8 @@ return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>
        
         { comments.map( (comment)=>{ const {id, commentInput}= comment 
-            return <p className="commetn-section p-[0.75em] " key={id}>
-              <div className="comment-div w-[100%] overflow-hidden">  {commentInput}  </div></p>  
+            return <section className="commetn-section p-[0.75em] " key={id}>
+              <div className="comment-div w-[100%] overflow-hidden">  {commentInput}  </div></section>  
       }  )
         }                
         
