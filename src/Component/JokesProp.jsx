@@ -24,9 +24,9 @@ const handleComment=()=>{
     setComment(!comment)
 
 }
-// useEffect(() => {
-//     handleComment()
-//   }, [])
+useEffect(() => {
+    handleComment()
+  }, [])
 // catch any available errors 
 // useEffect(() => {    
 //     console.log(comment);
