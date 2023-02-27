@@ -39,9 +39,9 @@ useEffect(() => {
     handleComment()
   }, [])
 // catch any available errors 
-useEffect(() => {
-    console.log(comment);
-  }, [comment])
+// useEffect(() => {    
+//     console.log(comment);
+//   }, [comment])
 
 
 
