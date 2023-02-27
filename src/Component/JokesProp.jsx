@@ -22,22 +22,11 @@ const handleDislike =()=>{
 const [comment ,setComment]=useState();
 const handleComment=()=>{
     setComment(!comment)
-    // the lines bwlow are sub5jected to changes 
-    // handle the Api fetch to getall the comments 
-      fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id={id}`)
-      .then(res => res.json())
-      .then(
-        (results) => {
-          console.log(results);
-          setComment(results)
-        },
-      )
-    // }
-    // end of subject to changes line 
+
 }
-useEffect(() => {
-    handleComment()
-  }, [])
+// useEffect(() => {
+//     handleComment()
+//   }, [])
 // catch any available errors 
 // useEffect(() => {    
 //     console.log(comment);

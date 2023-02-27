@@ -24,8 +24,8 @@ handleRomanceFetch()
 
 if(Data.length===0){
 return(
-  <div className='h-[60vh] loading-modal w-[80%] text-center bg-white text-3xl
-  md:w-[30%] h-[20vh] rounded-[10px] m-auto inset-0 z-50 fixed  py-[1.2em] '> LOADING....</div>
+  <div className='loading-modal w-[80%] text-center bg-white text-3xl
+  md:w-[30%] h-[15vh] rounded-[10px] m-auto inset-0 z-50 fixed  py-[1em] '> LOADING....</div>
 ) 
 } 
   return (

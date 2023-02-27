@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
@@ -19,9 +19,9 @@ const handleSubmit =(e)=>{
   if(commentInput.length>1 && commentInput.length <201 ) {
     console.log(commentInput, commentInput.length);
     const comment = {  
-      id:Math.floor(Math.random()*10000),
+      id:Math.floor(Math.random()*100),
       commentInput:commentInput,
-    };
+    };    
   // Add the comment to the list of comments 
     const AddComments =[comment,...comments];
     setComments(AddComments)
@@ -30,12 +30,23 @@ const handleSubmit =(e)=>{
 // setcommentInput("");
 
 // The lines below are subjected to changes 
+    // the lines bwlow are sub5jected to changes 
+    // handle the Api fetch to getall the comments 
+      fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id={id}`)
+      .then(res => res.json())
+      .then(
+        (results) => {
+          console.log(results);
+          setComments(results)
+        },
+      )
+    // end of subject to changes line 
 // add comments on a joke 
      fetch(`https://api.jokes.digitalrenter.com/api/comments`, {
      method: 'POST',
      body: JSON.stringify({ 
-    id:Math.floor(Math.random()*10000),
-    message:commentInput,
+    joke_id:Math.floor(Math.random()*100),
+    comment:commentInput,
      }),
      headers: {
       Accept: "application/json",
@@ -43,16 +54,17 @@ const handleSubmit =(e)=>{
     },
     
   })
-  setcommentInput("")
+  // setcommentInput("")
      .then((res) => res.json())
      .then((comments) => {
          setComments([comment,...comments])
-        //  subjected to change 
-    
+         setcommentInput("")
+        //  subjected to change   
      })
      .catch((err) => {
         console.log(err.message);
      });
+    
 //the end of the line that was subjected ti changes 
   }
   // incase he user"s input is invalid , validate the form 
@@ -62,7 +74,9 @@ const handleSubmit =(e)=>{
     setcommentInput("")
   }
 }
- 
+ useEffect(() => {    
+
+  }, [])
 
 return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>
@@ -74,9 +88,9 @@ return (
       }  )
         }  */}
             {/* subjected to changes  */}
-            { comments.map( (comment)=>{ const {id, message}= comment 
+            { comments.map( (commentx)=>{ const {id,  comment}= commentx 
             return <section className="commetn-section p-[0.75em] " key={id}>
-              <div className="comment-div w-[100%] overflow-hidden">  {message}  </div>
+              <div className="comment-div w-[100%] overflow-hidden">  {comment}  </div>
               </section>  
       }  )
         } 
