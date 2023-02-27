@@ -19,7 +19,8 @@ const handleSubmit =(e)=>{
   if(commentInput.length>1 && commentInput.length <201 ) {
     console.log(commentInput, commentInput.length);
     const comment = {  
-      id:Math.floor(Math.random()*100),
+      // id:Math.floor(Math.random()*10000),
+      id:Math.floor(Math.random()*10),
       commentInput:commentInput,
     };    
   // Add the comment to the list of comments 
@@ -29,23 +30,11 @@ const handleSubmit =(e)=>{
     console.log(AddComments);
 // setcommentInput("");
 
-// The lines below are subjected to changes 
-    // the lines bwlow are sub5jected to changes 
-    // handle the Api fetch to getall the comments 
-      fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id={id}`)
-      .then(res => res.json())
-      .then(
-        (results) => {
-          console.log(results);
-          setComments(results)
-        },
-      )
-    // end of subject to changes line 
 // add comments on a joke 
      fetch(`https://api.jokes.digitalrenter.com/api/comments`, {
      method: 'POST',
      body: JSON.stringify({ 
-    joke_id:Math.floor(Math.random()*100),
+    joke_id:Math.floor(Math.random()*25),
     comment:commentInput,
      }),
      headers: {
@@ -54,12 +43,11 @@ const handleSubmit =(e)=>{
     },
     
   })
-  // setcommentInput("")
+  setcommentInput("")
      .then((res) => res.json())
      .then((comments) => {
          setComments([comment,...comments])
-         setcommentInput("")
-        //  subjected to change   
+        //  setcommentInput("")
      })
      .catch((err) => {
         console.log(err.message);
@@ -75,7 +63,17 @@ const handleSubmit =(e)=>{
   }
 }
  useEffect(() => {    
-
+// The lines below are subjected to changes 
+    // handle the Api fetch to getall the comments 
+    fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id={id}`)
+    .then(res => res.json())
+    .then(
+      (results) => {
+        console.log(results);
+        setComments(results)
+      },
+    )
+  // end of subject to changes line 
   }, [])
 
 return (
@@ -88,8 +86,8 @@ return (
       }  )
         }  */}
             {/* subjected to changes  */}
-            { comments.map( (commentx)=>{ const {id,  comment}= commentx 
-            return <section className="commetn-section p-[0.75em] " key={id}>
+            { comments.map( (commentx)=>{ const {joke_id,  comment}= commentx 
+            return <section className="commetn-section p-[0.75em] " key={joke_id}>
               <div className="comment-div w-[100%] overflow-hidden">  {comment}  </div>
               </section>  
       }  )
