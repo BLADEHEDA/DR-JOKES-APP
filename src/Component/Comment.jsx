@@ -2,9 +2,9 @@ import React, { useState,useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
-const Comment = () => {
+const Comment = ({jokesid}) => {
   // logic for the comment component 
-const[comments ,setComments]=useState([]);
+const[Comments ,setComments]=useState([]);
 const [commentInput,setcommentInput]=useState("");
 const[errors,setErrors]= useState()
 // teack the changes of the input 
@@ -24,7 +24,7 @@ const handleSubmit =(e)=>{
       commentInput:commentInput,
     };    
   // Add the comment to the list of comments 
-    const AddComments =[comment,...comments];
+    const AddComments =[Comment,...Comments];
     setComments(AddComments)
     setErrors()
     console.log(AddComments);
@@ -35,6 +35,7 @@ const handleSubmit =(e)=>{
      method: 'POST',
      body: JSON.stringify({ 
     joke_id:Math.floor(Math.random()*25),
+    // joke_id:joke.id,
     comment:commentInput,
      }),
      headers: {
@@ -45,8 +46,8 @@ const handleSubmit =(e)=>{
   })
   setcommentInput("")
      .then((res) => res.json())
-     .then((comments) => {
-         setComments([comment,...comments])
+     .then((Comments) => {
+         setComments([Comment,...Comments])
         //  setcommentInput("")
      })
      .catch((err) => {
@@ -65,11 +66,11 @@ const handleSubmit =(e)=>{
  useEffect(() => {    
 // The lines below are subjected to changes 
     // handle the Api fetch to getall the comments 
-    fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id={id}`)
+    fetch(`https://api.jokes.digitalrenter.com/api/jokes `)
     .then(res => res.json())
     .then(
       (results) => {
-        console.log(results);
+        console.log(results[4].id);
         setComments(results)
       },
     )
@@ -79,19 +80,20 @@ const handleSubmit =(e)=>{
 return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>
        
-        {/* { comments.map( (comment)=>{ const {id, commentInput}= comment 
-            return <section className="commetn-section p-[0.75em] " key={id}>
-              <div className="comment-div w-[100%] overflow-hidden">  {commentInput}  </div>
+        {/* { comments.comments.map
+            return <section className="commetn-section p-[0.75em] " >
+              <div className="comment-div w-[100%] overflow-hidden">  {comment.console}  </div>
               </section>  
       }  )
         }  */}
+       {/* <div>  {Comments[0].comments.map((el)=>el)} </div> */}
             {/* subjected to changes  */}
-            { comments.map( (commentx)=>{ const {joke_id,  comment}= commentx 
+            {/* { comments.map( (commentx)=>{ const {joke_id,  comment}= commentx 
             return <section className="commetn-section p-[0.75em] " key={joke_id}>
               <div className="comment-div w-[100%] overflow-hidden">  {comment}  </div>
               </section>  
       }  )
-        } 
+        }  */}
 
         <form className="comment-actions flex mt-[2em]" onSubmit={handleSubmit }>
             <div className="form-comment-div basis-[90%] "> 

@@ -50,12 +50,14 @@ return(
         <div className="relative p-6 flex-auto">
              {/* the lines below are mapped from the api so are subjected to changes  */}
    <section className="Mapped-div-from Api">  
-            {Data.map((data)=>{ const {id, punchline,setup}  = data ;
+            {Data.map((data)=>{ const {id, punchline,setup,}  = data ;
           return(
             <div className="render-demos" key={id}>
           <JokesProp
+                 
                   title={punchline}
                   content={setup} 
+                  jokesid={data.id}
                   author={data.author.name}
                   src={emoji1}
                   />
