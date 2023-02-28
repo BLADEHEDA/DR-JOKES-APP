@@ -58,7 +58,7 @@ const handleformModal=()=>{
                 </div>
              
     </section>
-            { comment?<Comment id={props.id} />:""}
+            { comment?<Comment id={props.jokesid} />:""}
            {showformModal?<FormModal showformModal={showformModal} setshowformModal={setshowformModal} />:""}
     </div>
 

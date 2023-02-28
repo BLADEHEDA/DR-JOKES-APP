@@ -2,5 +2,5 @@ API ROUTES AVAILABLE
  GET  https://api.jokes.digitalrenter.com/api/jokes [Returns all jokes]
  POST  https://api.jokes.digitalrenter.com/api/jokes [Create a new joke]
  GET  https://api.jokes.digitalrenter.com/api/categories [Returns all categories]
- GET  https://api.jokes.digitalrenter.com/api/comments?joke_id={id} [Get all comments from a joke]
+ GET  https://api.jokes.digitalrenter.com/api/comments?joke_id=S{id} [Get all comments from a joke]
  POST  https://api.jokes.digitalrenter.com/api/comments [Save a new comment to a joke]

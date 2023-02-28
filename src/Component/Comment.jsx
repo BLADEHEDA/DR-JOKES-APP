@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
-const Comment = ({jokesid}) => {
+const Comment = (jokesid) => {
   // logic for the comment component 
 const[Comments ,setComments]=useState([]);
 const [commentInput,setcommentInput]=useState("");
@@ -66,11 +66,12 @@ const handleSubmit =(e)=>{
  useEffect(() => {    
 // The lines below are subjected to changes 
     // handle the Api fetch to getall the comments 
-    fetch(`https://api.jokes.digitalrenter.com/api/jokes `)
+    fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid}`)
     .then(res => res.json())
     .then(
       (results) => {
-        console.log(results[4].id);
+        console.log(results);
+        console.log(jokesid)
         setComments(results)
       },
     )
@@ -79,21 +80,14 @@ const handleSubmit =(e)=>{
 
 return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>
-       
-        {/* { comments.comments.map
-            return <section className="commetn-section p-[0.75em] " >
-              <div className="comment-div w-[100%] overflow-hidden">  {comment.console}  </div>
-              </section>  
-      }  )
-        }  */}
-       {/* <div>  {Comments[0].comments.map((el)=>el)} </div> */}
+       {/* <div>  {Comments[0].comments.map((el)=>el)} </div> */} 
             {/* subjected to changes  */}
-            {/* { comments.map( (commentx)=>{ const {joke_id,  comment}= commentx 
+           { Comments.map( (commentx)=>{ const {joke_id,  comment}= commentx 
             return <section className="commetn-section p-[0.75em] " key={joke_id}>
               <div className="comment-div w-[100%] overflow-hidden">  {comment}  </div>
               </section>  
       }  )
-        }  */}
+        } 
 
         <form className="comment-actions flex mt-[2em]" onSubmit={handleSubmit }>
             <div className="form-comment-div basis-[90%] "> 
