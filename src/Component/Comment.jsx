@@ -11,6 +11,16 @@ const[errors,setErrors]= useState()
 let inputvalue
 const handleChange =(e)=>{
    inputvalue = e.target.value;
+   fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid}`)
+   .then(res => res.json())
+   .then(
+     (results) => {
+       console.log(results);
+       // alert( jokesid)
+       console.log(jokesid);
+       setComments(results)
+     },
+   )
   setcommentInput(inputvalue);
 }
 // track the behaviour of the list on submit 
@@ -63,20 +73,20 @@ const handleSubmit =(e)=>{
     setcommentInput("")
   }
 }
- useEffect(() => {    
-// The lines below are subjected to changes     jokesid={data.id}
-    // handle the Api fetch to getall the comments  normally supposed to pass the valuwe of the prop in here 
-    fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid}`)
-    .then(res => res.json())
-    .then(
-      (results) => {
-        console.log(results);
-        // alert( jokesid)
-        console.log(jokesid);
-        setComments(results)
-      },
-    )
-  }, [])
+//  useEffect(() => {    
+// // The lines below are subjected to changes     jokesid={data.id}
+//     // handle the Api fetch to getall the comments  normally supposed to pass the valuwe of the prop in here 
+//     fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid}`)
+//     .then(res => res.json())
+//     .then(
+//       (results) => {
+//         console.log(results);
+//         // alert( jokesid)
+//         console.log(jokesid);
+//         setComments(results)
+//       },
+//     )
+//   }, [])
     // end of subject to changes line 
 
 return (
