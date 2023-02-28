@@ -22,18 +22,10 @@ const handleDislike =()=>{
 const [comment ,setComment]=useState();
 const handleComment=()=>{
     setComment(!comment);
-    
-
 }
 useEffect(() => {
     handleComment()
   }, [])
-// catch any available errors 
-// useEffect(() => {    
-//     console.log(comment);
-//   }, [comment])
-
-
 
 // The code to show and hide show the form to add jokes 
 const [ showformModal,setshowformModal] = useState();
