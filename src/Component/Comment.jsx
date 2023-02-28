@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
-const Comment = (jokesid) => {
+const Comment = ({jokesid}) => {
   // logic for the comment component 
 const[Comments ,setComments]=useState([]);
 const [commentInput,setcommentInput]=useState("");
@@ -63,10 +63,10 @@ const handleSubmit =(e)=>{
     setcommentInput("")
   }
 }
- useEffect(() => {    
 // The lines below are subjected to changes 
     // handle the Api fetch to getall the comments 
-    fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid}`)
+ useEffect(() => {    
+    fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${4}`)
     .then(res => res.json())
     .then(
       (results) => {
@@ -75,7 +75,6 @@ const handleSubmit =(e)=>{
         setComments(results)
       },
     )
-  // end of subject to changes line 
   }, [])
 
 return (
