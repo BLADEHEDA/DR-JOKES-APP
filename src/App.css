@@ -1,0 +1,208 @@
+/* the stles thatfollo are the styles for the navbar ftyles  */
+@media only screen and (min-width:1px){
+.mobile{
+  display:flex;
+}
+.App{
+  padding:2em 1.5em;
+  background: rgba(248, 245, 245, 1);
+}
+.desktop{
+  display: none;
+}
+.navlinks-mobile{
+  display: none;
+    top:5em;
+    width: 87vw;
+    background:rgba(0, 0, 0, 0.9);
+}
+.navlink {
+  font-weight:500;
+  color :white;
+  text-align:center;
+  margin-bottom:0.7em;
+}
+.close{
+  left:18em;
+}
+.show{
+   display: block;
+}
+/* the styles that pfor the mainbafr */
+.hero-img{
+  margin:1em 0em;
+}
+.hero-pic{
+width: 20em;
+}
+.dayjokes-div,.jokescategory-div,.Testimony{
+  background: white;
+}
+.jokes-emoji-div{
+  margin:0 auto;
+}
+.Footer{
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+.icon{
+  padding-left: 1em;
+}
+.splider{
+   margin:-2.5em; 
+}
+.jokes-prop-card{
+  background: rgb(247, 245, 245);
+  /* border:solid 1px black; */
+}
+
+.comment-section,.form-comment-div,.commetn-section{
+    background: rgb(247, 245, 245); 
+}
+.relatives{
+  background: rgb(247, 245, 245); 
+}
+
+.formmodal-section{
+  background: rgb(247, 245, 245); 
+}
+.joke-input {
+  border:solid 1px rgb(42, 40, 40);
+  margin-top:0.5em;
+  background: white; 
+}
+.joke-input:focus {
+  outline:none;
+}
+.commetn-section {
+    border:solid 1px black;
+    background: rgb(247, 245, 245);
+    margin-bottom: 1em;
+}
+.comment-section{
+  margin-bottom: 0.2em;
+  border:solid 1px black;
+}
+.form-comment-div{
+  border:solid 1px black;
+}
+
+/* .commetn-section{
+  text-align: center;
+} */
+/* .select{
+    border:solid 1px black;
+} */
+ 
+.tag {
+  text-align: center;
+}
+.loading-modal {
+  border:solid 1px black;
+}
+
+}
+
+@media only screen and (min-width:481px){ 
+  .App{
+    padding:2em 3em;
+  }
+  .mobile{
+    display: flex;
+  }
+  .desktop{
+    display: none;
+  }
+.navlink {
+  font-weight:500;
+  color :black;
+  margin-bottom:0.7em;
+}
+
+}
+@media only screen and (min-width:510px){
+  .App{
+    padding:2em 5em;
+  }
+}
+
+
+@media only screen and (min-width:600px){
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    display: flex;
+  }
+
+.App{
+  padding:2em 5em;
+}
+.dayjokes-div-section,.JokesCategory,.Testimonial-section{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+}
+.mainbar {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 3em 0em 5em 0em;
+}
+.hero-img{
+flex: 50%;
+}
+ .main-section{
+  flex: 50%;
+  text-align: start;
+ }
+ .main-head {
+  width: 85%;
+  margin-top: 0.5em;
+ }
+ .main-section-btn{
+  justify-content: start;
+ }
+ .main-content{ 
+  width: 90%;
+  margin-top: 1em;
+ }
+
+ }
+ @media only screen and (min-width: 1000px){
+  .App{
+    padding:2em 7em;
+  }
+  .dayjokes-div-section,.JokesCategory,.Testimonial-section{
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+}
+.dayjokes-div-section,.Testimonial-section{
+  grid-column-gap: 20px;
+}
+.copyright-text{
+  margin-top: 1.2em;
+}
+.mainbar {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 3em 0em 5em 0em;
+}
+.main-head {
+  font-size: 2.7em;
+  margin-top: 1em;
+  line-height:1.2;
+ }
+ .main-content{ 
+  width: 60%;
+  margin-top: 1em;
+  line-height:1.6;
+ } 
+ .hero-img{
+  margin:0em 0em;
+    /* border: solid 1px black;   */
+}
+.hero-pic{
+width: 25em;
+}
+
+ }
