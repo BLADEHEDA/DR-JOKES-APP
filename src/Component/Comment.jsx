@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
-const Comment = ({jokesid}) => {
+const Comment = (jokesid) => {
   // logic for the comment component 
 const[Comments ,setComments]=useState([]);
 const [commentInput,setcommentInput]=useState("");
@@ -11,6 +11,16 @@ const[errors,setErrors]= useState()
 let inputvalue
 const handleChange =(e)=>{
    inputvalue = e.target.value;
+   fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid.id}`)
+   .then(res => res.json())
+   .then(
+     (results) => {
+       console.log(results);
+       console.log(jokesid)
+       console.log(jokesid.id)
+       setComments(results)
+     },
+   )
   setcommentInput(inputvalue);
 }
 // track the behaviour of the list on submit 
@@ -65,17 +75,18 @@ const handleSubmit =(e)=>{
 }
 // The lines below are subjected to changes 
     // handle the Api fetch to getall the comments 
- useEffect(() => {    
-    fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${4}`)
-    .then(res => res.json())
-    .then(
-      (results) => {
-        console.log(results);
-        console.log(jokesid)
-        setComments(results)
-      },
-    )
-  }, [])
+//  useEffect(() => {    
+//     fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid.id}`)
+//     .then(res => res.json())
+//     .then(
+//       (results) => {
+//         console.log(results);
+//         console.log(jokesid)
+//         console.log(jokesid.id)
+//         setComments(results)
+//       },
+//     )
+//   }, [])
 
 return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>

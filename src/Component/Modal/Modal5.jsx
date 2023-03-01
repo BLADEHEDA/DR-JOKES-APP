@@ -57,7 +57,7 @@ return(
                  
                   title={punchline}
                   content={setup} 
-                  jokesid={data.id}
+                  jokesid={data.id.id}
                   author={data.author.name}
                   src={emoji1}
                   />
