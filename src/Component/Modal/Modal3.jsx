@@ -54,6 +54,7 @@ return(
                   author={data.author.name}
                   src={emoji1}
                   />
+        
             </div>
           )
           })}

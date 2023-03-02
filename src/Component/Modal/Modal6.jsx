@@ -47,7 +47,7 @@ return(
         <div className="relative p-6 flex-auto">
 
                    {/* the lines below are mapped from the api so are subjected to changes  */}
-   <section className="Mapped-div-from Api">  
+                   <section className="Mapped-div-from Api">  
             {Data.map((data)=>{ const {id, punchline,setup}  = data ;
           return(
             <div className="render-demos" key={id}>
@@ -57,6 +57,7 @@ return(
                   author={data.author.name}
                   src={emoji1}
                   />
+        
             </div>
           )
           })}

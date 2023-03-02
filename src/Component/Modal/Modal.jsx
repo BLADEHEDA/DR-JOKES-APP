@@ -53,11 +53,11 @@ const [Data, setData] = useState([]);
            <section className="Mapped-div-from Api">  
             {Data.map((data)=>{ const {id, punchline,setup}  = data ;
           return(
-            <div className="render-demos" key={id}>
+            <div className="render-demos" key={id}> 
           <JokesProp
                   title={punchline}
-                  content={setup} 
                   jokesid={data.id}
+                  content={setup} 
                   author={data.author.name}
                   src={emoji1}
                   />

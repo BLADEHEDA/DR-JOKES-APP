@@ -22,10 +22,12 @@ const handleDislike =()=>{
 const [comment ,setComment]=useState();
 const handleComment=()=>{
     setComment(!comment)
-
 }
 useEffect(() => {
-    handleComment()
+    // handleComment()
+    if(comment){
+  props.handlefetch()
+    }
   }, [])
 // catch any available errors 
 // useEffect(() => {    
@@ -47,7 +49,7 @@ const handleformModal=()=>{
             <div className="prop-img-div w-[3em] m-auto ">
             <img src={props.src} alt="prop-emoji" className="category-img " /> </div>
             <p className="prop-title font-bold text-center "> {props.title} </p>
-            <p className="prop-title font-bold text-center "> {props.jokesid} </p>
+            {/* <p className="prop-title font-bold text-center "> {props.jokesid} </p> */}
             <p className="prop-content text-center text-base my-2 "> {props.content}   </p>
             <p className="prop-author-content text-center font-bold ">{props.author} </p>
                 <div className="props-icons flex justify-evenly mt-7"> 
@@ -58,7 +60,7 @@ const handleformModal=()=>{
                 </div>
              
     </section>
-            { comment?<Comment id={props.jokesid} />:""}
+            { comment?<Comment  id={props.jokesid} />:""}
            {showformModal?<FormModal showformModal={showformModal} setshowformModal={setshowformModal} />:""}
     </div>
 

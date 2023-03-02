@@ -11,18 +11,32 @@ const[errors,setErrors]= useState()
 let inputvalue
 const handleChange =(e)=>{
    inputvalue = e.target.value;
-   fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid.id}`)
-   .then(res => res.json())
-   .then(
-     (results) => {
-       console.log(results);
-       console.log(jokesid)
-       console.log(jokesid.id)
-       setComments(results)
-     },
-   )
   setcommentInput(inputvalue);
+  fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid.id}`)
+  .then(res => res.json())
+  .then(
+    (results) => {
+      console.log(results);
+      console.log(jokesid)
+      console.log(jokesid.id)
+      setComments(results)
+    },
+  )
 }
+// the lines below are subjected to changes 
+// const handlefetch=()=>{
+// alert("yo")
+//   fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid.id}`)
+//   .then(res => res.json())
+//   .then(
+//     (results) => {
+//       console.log(results);
+//       console.log(jokesid)
+//       console.log(jokesid.id)
+//       setComments(results)
+//     },
+//   )
+// }
 // track the behaviour of the list on submit 
 const handleSubmit =(e)=>{
   e.preventDefault();
@@ -44,8 +58,9 @@ const handleSubmit =(e)=>{
      fetch(`https://api.jokes.digitalrenter.com/api/comments`, {
      method: 'POST',
      body: JSON.stringify({ 
-    joke_id:Math.floor(Math.random()*25),
-    // joke_id:joke.id,
+    // joke_id:Math.floor(Math.random()*25),
+    // joke_id: joke.id,
+    joke_id:jokesid.id,
     comment:commentInput,
      }),
      headers: {
@@ -64,7 +79,6 @@ const handleSubmit =(e)=>{
         console.log(err.message);
      });
     
-//the end of the line that was subjected ti changes 
   }
   // incase he user"s input is invalid , validate the form 
   else if (!(commentInput.length>1 && commentInput.length <201)){
@@ -73,21 +87,6 @@ const handleSubmit =(e)=>{
     setcommentInput("")
   }
 }
-// The lines below are subjected to changes 
-    // handle the Api fetch to getall the comments 
-//  useEffect(() => {    
-//     fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid.id}`)
-//     .then(res => res.json())
-//     .then(
-//       (results) => {
-//         console.log(results);
-//         console.log(jokesid)
-//         console.log(jokesid.id)
-//         setComments(results)
-//       },
-//     )
-//   }, [])
-
 return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>
        {/* <div>  {Comments[0].comments.map((el)=>el)} </div> */} 

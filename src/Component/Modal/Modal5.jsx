@@ -49,18 +49,17 @@ return(
         <div className="modal-prop-div h-[80vh]   overflow-y-auto bg-white shadow-lg "> 
         <div className="relative p-6 flex-auto">
              {/* the lines below are mapped from the api so are subjected to changes  */}
-   <section className="Mapped-div-from Api">  
-            {Data.map((data)=>{ const {id, punchline,setup,}  = data ;
+             <section className="Mapped-div-from Api">  
+            {Data.map((data)=>{ const {id, punchline,setup}  = data ;
           return(
             <div className="render-demos" key={id}>
           <JokesProp
-                 
                   title={punchline}
                   content={setup} 
-                  jokesid={data.id.id}
                   author={data.author.name}
                   src={emoji1}
                   />
+        
             </div>
           )
           })}
