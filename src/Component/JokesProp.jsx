@@ -21,12 +21,12 @@ const [comment ,setComment]=useState();
 const handleComment=()=>{
     setComment(!comment)
 }
-useEffect(() => {
-    // handleComment()
-    if(comment){
-  props.handlefetch()
-    }
-  }, [])
+// useEffect(() => {
+//     // handleComment()
+//     if(comment){
+//   props.handlefetch()
+//     }
+//   }, [])
 
 // The code to show and hide show the form to add jokes 
 const [ showformModal,setshowformModal] = useState();
@@ -50,7 +50,6 @@ const handleformModal=()=>{
                     <div className="comments cursor-pointer"> <FontAwesomeIcon icon={faComment} onClick={ handleComment} /></div>
                     <div className="add cursor-pointer"> <FontAwesomeIcon icon={faPlus} onClick={handleformModal}  /></div>
                 </div>
-             
     </section>
             { comment?<Comment  id={props.jokesid} />:""}
            {showformModal?<FormModal showformModal={showformModal} setshowformModal={setshowformModal} />:""}
@@ -58,6 +57,5 @@ const handleformModal=()=>{
 
   )
 }
-
 export default JokesProp
 
