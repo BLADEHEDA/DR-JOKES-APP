@@ -49,6 +49,7 @@ return(
           return(
             <div className="render-demos" key={id}>
           <JokesProp
+           jokesid={data.id}
                   title={punchline}
                   content={setup} 
                   author={data.author.name}

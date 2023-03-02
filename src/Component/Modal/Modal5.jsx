@@ -54,6 +54,7 @@ return(
           return(
             <div className="render-demos" key={id}>
           <JokesProp
+                 jokesid={data.id}
                   title={punchline}
                   content={setup} 
                   author={data.author.name}
@@ -73,17 +74,6 @@ return(
                themselves. If you're taught you can’t do anything, you
                won’t do anything. I was taught I could do everything."
                author="BLADE is the "
-               src={emoji1}
-               />
-           
-              <JokesProp
-              title=" Laygh or die"
-               content=" I always felt like I could do anything. That’s the main
-               thing people are controlled by! Thoughts- their perception
-               of themselves! They're slowed down by their perception of
-               themselves. If you're taught you can’t do anything, you
-               won’t do anything. I was taught I could do everything."
-               author="Yaya the Great"
                src={emoji1}
                />
                <JokesProp

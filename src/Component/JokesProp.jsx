@@ -4,8 +4,6 @@ import {faThumbsUp,faThumbsDown,faComment,faPlus} from '@fortawesome/free-solid-
 import Comment from "./Comment"
 import FormModal from './Navbar/FormModal'
 
-
-
 const JokesProp = (props) => {
     // the lines that follow are the code to implement the states of the like comment and subscribe functionalities 
     // like states 
@@ -29,12 +27,6 @@ useEffect(() => {
   props.handlefetch()
     }
   }, [])
-// catch any available errors 
-// useEffect(() => {    
-//     console.log(comment);
-//   }, [comment])
-
-
 
 // The code to show and hide show the form to add jokes 
 const [ showformModal,setshowformModal] = useState();

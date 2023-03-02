@@ -51,6 +51,7 @@ return(
           <JokesProp
                   title={punchline}
                   content={setup} 
+                  jokesid={data.id}
                   author={data.author.name}
                   src={emoji1}
                   />

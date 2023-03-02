@@ -41,8 +41,6 @@ return(
               
       <div className="modal-container  ">
 
-     
-  
         <div className="modal-prop-div h-[80vh]   overflow-y-auto bg-white shadow-lg "> 
         <div className="relative p-6 flex-auto">
 
@@ -52,30 +50,19 @@ return(
           return(
             <div className="render-demos" key={id}>
           <JokesProp
+                 jokesid={data.id}
                   title={punchline}
                   content={setup} 
                   author={data.author.name}
                   src={emoji1}
-                  />
-        
+                  />   
             </div>
           )
           })}
         </section>
-           {/* the jokes below are manually Typed JOkes */}
-        <JokesProp
-              title=" Laygh or die"
-               content=" I always felt like I could do anything. That’s the main
-               thing people are controlled by! Thoughts- their perception
-               of themselves! They're slowed down by their perception of
-               themselves. If you're taught you can’t do anything, you
-               won’t do anything. I was taught I could do everything."
-               author="BLADE Modal6"
-               src={emoji1}
-               />
-           
+           {/* the jokes below are manually Typed JOkes */}           
               <JokesProp
-              title=" Laygh or die"
+              title=" La8gh or die"
                content=" I always felt like I could do anything. That’s the main
                thing people are controlled by! Thoughts- their perception
                of themselves! They're slowed down by their perception of
@@ -85,7 +72,7 @@ return(
                src={emoji1}
                />
                <JokesProp
-              title=" Laygh or die"
+              title=" Laugh or die"
                content=" I always felt like I could do anything. That’s the main
                thing people are controlled by! Thoughts- their perception
                of themselves! They're slowed down by their perception of
