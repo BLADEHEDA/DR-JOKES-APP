@@ -15,7 +15,10 @@ const [Data, setData] = useState([]);
       .then(
         (results) => {
           console.log(results);
-          setData(results)
+          // console.log(results.category_id);
+          const filtered= results.filter(result=>result.category_id===1)
+          console.log(filtered);
+          setData(filtered)
         },
       )
     }
@@ -36,7 +39,8 @@ const [Data, setData] = useState([]);
 
   return (
     // <section className="modal-section w-[80%]  md:w-[60%] m-auto ">
-    <section className="modal-section h-[60vh]  w-[80%]  md:w-[60%] m-auto inset-0 z-50 bg-white fixed mb-[13em] py-3 rounded-2xl"> 
+    <section className="modal-section h-[60vh]  w-[80%]  md:w-[60%] m-auto inset-0 z-50 bg-white 
+    fixed mb-[13em] py-3 rounded-2xl"> 
               <div className="modal-head-section flex justify-between px-5 mb-3">
              <h3 className="text-2xl md:text-3xl font-semibold"> JOkes Category </h3>
              <button className='text-2xl font-semibold text-red-500 "'

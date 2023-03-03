@@ -1,8 +1,10 @@
+//subjected to changes changes if not modified This the Comment component 
 import React, { useState,useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
 const Comment = (jokesid) => {
+// const Comment = ({jokesid,Comments,setComments}) 
   // logic for the comment component 
 const[Comments ,setComments]=useState([]);
 const [commentInput,setcommentInput]=useState("");
@@ -12,6 +14,19 @@ let inputvalue
 const handleChange =(e)=>{
    inputvalue = e.target.value;
   setcommentInput(inputvalue);
+  // fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid.id}`)
+  // .then(res => res.json())
+  // .then(
+  //   (results) => {
+  //     console.log(results);
+  //     console.log(jokesid)
+  //     console.log(jokesid.id)
+  //     setComments(results)
+  //   },
+  // )
+}
+// subjected to changes 
+useEffect(() => {
   fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid.id}`)
   .then(res => res.json())
   .then(
@@ -22,21 +37,7 @@ const handleChange =(e)=>{
       setComments(results)
     },
   )
-}
-// the lines below are subjected to changes 
-// const handlefetch=()=>{
-// alert("yo")
-//   fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid.id}`)
-//   .then(res => res.json())
-//   .then(
-//     (results) => {
-//       console.log(results);
-//       console.log(jokesid)
-//       console.log(jokesid.id)
-//       setComments(results)
-//     },
-//   )
-// }
+  }, [])
 // track the behaviour of the list on submit 
 const handleSubmit =(e)=>{
   e.preventDefault();
@@ -72,6 +73,7 @@ const handleSubmit =(e)=>{
   setcommentInput("")
      .then((res) => res.json())
      .then((Comments) => {
+    console.log(Comments);
          setComments([Comment,...Comments])
         //  setcommentInput("")
      })

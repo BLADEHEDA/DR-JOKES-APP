@@ -1,3 +1,4 @@
+// Subjected to changes . This is the JOkes  jokesprop
 import { useEffect,useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faThumbsUp,faThumbsDown,faComment,faPlus} from '@fortawesome/free-solid-svg-icons'
@@ -21,12 +22,6 @@ const [comment ,setComment]=useState();
 const handleComment=()=>{
     setComment(!comment)
 }
-// useEffect(() => {
-//     // handleComment()
-//     if(comment){
-//   props.handlefetch()
-//     }
-//   }, [])
 
 // The code to show and hide show the form to add jokes 
 const [ showformModal,setshowformModal] = useState();
@@ -34,7 +29,6 @@ const handleformModal=()=>{
     setshowformModal(!showformModal)
     // implement the get request for the jokes per joke id 
 }
-
   return (
 <div>     
        <section className="jokes-prop-card   md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em] rounded-[10px] mb-[2em]"> 
@@ -51,10 +45,9 @@ const handleformModal=()=>{
                     <div className="add cursor-pointer"> <FontAwesomeIcon icon={faPlus} onClick={handleformModal}  /></div>
                 </div>
     </section>
-            { comment?<Comment  id={props.jokesid} />:""}
+            { comment?<Comment  id={props.jokesid}/>:""}
            {showformModal?<FormModal showformModal={showformModal} setshowformModal={setshowformModal} />:""}
     </div>
-
   )
 }
 export default JokesProp

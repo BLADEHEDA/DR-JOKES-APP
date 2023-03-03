@@ -13,7 +13,10 @@ const handleRomanceFetch =()=>{
   .then(
     (results) => {
       console.log(results);
-      setData(results)
+      // setData(results)
+     const filtered= results.filter(result=>result.category_id==3)
+      setData(filtered)
+      console.log(filtered);
     },
   )
 }
