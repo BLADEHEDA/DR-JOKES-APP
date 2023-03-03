@@ -14,16 +14,6 @@ let inputvalue
 const handleChange =(e)=>{
    inputvalue = e.target.value;
   setcommentInput(inputvalue);
-  // fetch(`https://api.jokes.digitalrenter.com/api/comments?joke_id=${jokesid.id}`)
-  // .then(res => res.json())
-  // .then(
-  //   (results) => {
-  //     console.log(results);
-  //     console.log(jokesid)
-  //     console.log(jokesid.id)
-  //     setComments(results)
-  //   },
-  // )
 }
 // subjected to changes 
 useEffect(() => {
@@ -59,16 +49,13 @@ const handleSubmit =(e)=>{
      fetch(`https://api.jokes.digitalrenter.com/api/comments`, {
      method: 'POST',
      body: JSON.stringify({ 
-    // joke_id:Math.floor(Math.random()*25),
-    // joke_id: joke.id,
     joke_id:jokesid.id,
     comment:commentInput,
      }),
      headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-    },
-    
+    },   
   })
   setcommentInput("")
      .then((res) => res.json())
@@ -80,7 +67,6 @@ const handleSubmit =(e)=>{
      .catch((err) => {
         console.log(err.message);
      });
-    
   }
   // incase he user"s input is invalid , validate the form 
   else if (!(commentInput.length>1 && commentInput.length <201)){
@@ -89,9 +75,14 @@ const handleSubmit =(e)=>{
     setcommentInput("")
   }
 }
+if(Comments.length===0){
+  return(
+    <div className='loading-modal w-[80%] text-center bg-white text-xl
+    md:w-[30%] h-[10vh] rounded-[7px] m-auto inset-0 z-50 fixed py-[0.75em]'> LOADING comments....</div>
+  ) 
+  } 
 return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>
-       {/* <div>  {Comments[0].comments.map((el)=>el)} </div> */} 
             {/* subjected to changes  */}
            { Comments.map( (commentx)=>{ const {joke_id,  comment}= commentx 
             return <section className="commetn-section p-[0.75em] " key={joke_id}>

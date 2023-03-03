@@ -22,13 +22,13 @@ const [comment ,setComment]=useState();
 const handleComment=()=>{
     setComment(!comment)
 }
-
 // The code to show and hide show the form to add jokes 
 const [ showformModal,setshowformModal] = useState();
 const handleformModal=()=>{
     setshowformModal(!showformModal)
     // implement the get request for the jokes per joke id 
 }
+
   return (
 <div>     
        <section className="jokes-prop-card   md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em] rounded-[10px] mb-[2em]"> 
