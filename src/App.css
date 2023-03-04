@@ -62,9 +62,22 @@ width: 20em;
 .relatives{
   background: rgb(247, 245, 245); 
 }
+.form-modal-div{
+  border:solid 1px black;
+    background :Black;
+}
 
 .formmodal-section{
   background: rgb(247, 245, 245); 
+    /* border:solid 1px black; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* z-index: 9999; */
+   margin-top: 7.5em;
+    height: 60vh;
 }
 .joke-input {
   border:solid 1px rgb(42, 40, 40);
@@ -75,25 +88,18 @@ width: 20em;
   outline:none;
 }
 .commetn-section {
-    border:solid 1px black;
     background: rgb(247, 245, 245);
-    margin-bottom: 1em;
+    margin-bottom: -1.5em;
+    margin-left: -0.8em;
 }
 .comment-section{
-  margin-bottom: 0.2em;
+  margin-bottom: 1em;
   border:solid 1px black;
 }
 .form-comment-div{
   border:solid 1px black;
 }
 
-/* .commetn-section{
-  text-align: center;
-} */
-/* .select{
-    border:solid 1px black;
-} */
- 
 .tag {
   text-align: center;
 }
@@ -109,9 +115,10 @@ width: 20em;
   left: 0;
   z-index: 9999;
   overflow: hidden;
-margin-top: 7.5em;
+ margin-top: 7.5em;
   border:solid 1px black; 
-  opacity:10;
+  /* opacity:10; */
+  /* height: 60vh; */
 }
 
 }
@@ -137,6 +144,9 @@ margin-top: 7.5em;
   .App{
     padding:2em 5em;
   }
+  .joke-input:focus {
+    outline:none;
+  }
 }
 
 
@@ -147,7 +157,9 @@ margin-top: 7.5em;
   .desktop{
     display: flex;
   }
-
+  .joke-input:focus {
+    outline:none;
+  }
 .App{
   padding:2em 5em;
 }
@@ -216,6 +228,9 @@ flex: 50%;
 }
 .hero-pic{
 width: 25em;
+}
+.joke-input:focus {
+  outline:none;
 }
 
  }

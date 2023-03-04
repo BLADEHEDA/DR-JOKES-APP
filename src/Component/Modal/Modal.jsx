@@ -66,34 +66,11 @@ const [Data, setData] = useState([]);
                   content={setup} 
                   author={data.author.name}
                   src={emoji1}
-                  />
-        
+                  /> 
             </div>
           )
           })}
         </section>
-            {/* The lines that follow are manually Typed jokes*/}
-        <JokesProp
-              title=" Laygh or die"
-               content=" I always felt like I could do anything. That’s the main
-               thing people are controlled by! Thoughts- their perception
-               of themselves! They're slowed down by their perception of
-               themselves. If you're taught you can’t do anything, you
-               won’t do anything. I was taught I could do everything."
-               author="Modal1"
-               src={emoji1}
-               />
- 
-              <JokesProp
-              title=" Laygh or die"
-               content=" I always felt like I could do anything. That’s the main
-               thing people are controlled by! Thoughts- their perception
-               of themselves! They're slowed down by their perception of
-               themselves. If you're taught you can’t do anything, you
-               won’t do anything. I was taught I could do everything."
-               author="Yaya the Great"
-               src={emoji1}
-               />
                 </div>
                  </div>
       </div>

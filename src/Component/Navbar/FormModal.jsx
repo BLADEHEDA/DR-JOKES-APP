@@ -135,28 +135,29 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
 
 
   return (
+  
     <section className="formmodal-section h-[60vh] py-1  w-[75%]  md:w-[35%] py-3   m-auto inset-0 z-50 bg-white fixed mb-[14em] rounded-xl">
     <div className="modal-head-section1 text-center px-5 mb-0.5"     onClick={() =>{ 
                       setshowformModal()}}
                   > 
-    <h3 className="text-2xl md:text-3xl font-semibold center">Add Jokes</h3>
+    <h3 className="text-xl md:text-xl font-semibold center">Add Jokes</h3>
 
       </div>
-<form className="relatives px-4 pb-10 md:px-7 " onSubmit={handleSubmit} >
+<form className="relatives px-4 pb-1 md:px-7 " onSubmit={handleSubmit} >
     <div className="Author-div form-div ">
-        <div className=" mt-[0.5em]">  
+        {/* <div className=" mt-[0.5em]">  
         <label htmlFor="Author" className="author-label mt-[0.5em] text-sm p-2 md:text-lg  ">Author</label>
-        </div>
+        </div> */}
         <div className="w-full form-element">   
         <input type="text" name="author_name" placeholder='Enter Your Name' onChange={handleChangeAuthor} value={Author } 
         className="joke-input  w-full p-2" /> 
         {validAuthor? <div className="errors text-sm text-red-600">Enter a valid Name</div>:null   }
         </div>
     </div>
-    <div className="joke-title-div form-div mt-[.3em]">
-    <div className=" mt-[0em]">  
+    <div className="joke-title-div form-div mt-[.25em]">
+    {/* <div className=" mt-[0em]">  
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Author Email</label>
-        </div>
+        </div> */}
         <div>  
         <input type="email"  name="author_email" placeholder='Enter Your Email Adresss' onChange={handlechangeEmail}  value={EmailValue} 
          className="joke-input w-full p-2" />
@@ -164,23 +165,23 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         </div>
     </div>
    
-        <div className="joke-title-div form-div mt-[.3em] ">
-    <label htmlFor="Author" className="author-label text-sm md:text-lg">Choose a category</label>
+        <div className="joke-title-div form-div mt-[.25em] ">
+    {/* <label htmlFor="Author" className="author-label text-sm md:text-lg">Choose a category</label> */}
   <select name="categories"  className='select  w-full p-2 focus:outline-none ' onChange={ handlechangeSelect } > 
   <option name="relationship" >Choose Option</option>
     <option name="category_id" value={1}>Relationship Jokess</option>
     <option  name="category_id" value={2} >Education Jokes</option>
-    <option   name="category_id"value={3}>Westernv Jokes</option>  
+    <option   name="category_id"value={3}>Western Jokes</option>  
     <option  name="category_id"value={4}>Tech Jokes</option>
     <option  name="category_id"value={5}> African Jokes</option>
-    <option  name="category_id"value={5}>Family JOkes</option>
+    <option  name="category_id"value={1}>Family JOkes</option>
   </select>
 </div>
 
-    <div className="joke-title-div form-div mt-[0.3em]">
-    <div className=" mt-[0em]">  
+    <div className="joke-title-div form-div mt-[0.25em]">
+    {/* <div className=" mt-[0em]">  
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Jokes Punchline</label>
-        </div>
+        </div> */}
         <div>  
         <input type="text"  name="punchline" placeholder='Enter Your Joke Joke Punchline' onChange={handleChangeTitle}  value={Title} 
          className="joke-input w-full p-2" />
@@ -188,18 +189,19 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
         </div>
     </div>
 
-    <div className="joke-content-div form-div mt-[.3em]">
-    <div>  
+    <div className="joke-content-div form-div mt-[.25em]">
+    {/* <div>  
         <label htmlFor="Author" className="author-label text-sm md:text-lg">Joke Content</label>
-        </div>
+        </div> */}
         <div>   
-      <textarea name="setup" className="joke-input w-full p-2" onChange={handletextArea} value={textArea} ></textarea>
+      <textarea name="setup" placeholder='Enter Your Joke Content'  className="joke-input leading-4 w-full p-2" 
+      onChange={handletextArea} value={textArea} ></textarea>
       { validtextArea ?<div className="errors text-sm text-red-600">Joke should be atleast 10 Characters</div>:null   }
      
       </div>
       <div>   
       <Button  style={{color:"white",background:"rgba(0, 0, 255, 0.84)",borderRadius:"5px" 
-      ,padding:"0.75em 1em",margin:"0.5em 0em 2em 0em",width:"100%" }} text="Add Jokes" />
+      ,padding:"0.75em 1em",margin:"0.3em 0em 1em 0em",width:"100%" }} text="Add Jokes" />
       </div>
     </div>
        </form>

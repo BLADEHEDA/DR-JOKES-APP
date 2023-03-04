@@ -82,11 +82,11 @@ if(Comments.length===0){
   ) 
   } 
 return (
-    <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em]'>
+    <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto pb-[1em] px-[1.5em]'>
             {/* subjected to changes  */}
            { Comments.map( (commentx)=>{ const {joke_id,  comment}= commentx 
             return <section className="commetn-section p-[0.75em] " key={joke_id}>
-              <div className="comment-div w-[100%] overflow-hidden">  {comment}  </div>
+              <div className="comment-div w-[100%] overflow-hidden break-all leading-5 mt-[0.5em]">  {comment}  </div>
               </section>  
       }  )
         } 
