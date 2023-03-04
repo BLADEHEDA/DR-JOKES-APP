@@ -75,12 +75,12 @@ const handleSubmit =(e)=>{
     setcommentInput("")
   }
 }
-if(Comments.length===0){
-  return(
-    <div className='loading-modal w-[80%] text-center bg-white text-xl
-    md:w-[30%] h-[10vh] rounded-[7px] m-auto inset-0 z-50 fixed py-[0.75em]'> LOADING comments....</div>
-  ) 
-  } 
+// if(Comments.length===0){
+//   return(
+//     <div className='loading-modal w-[80%] text-center bg-white text-xl
+//     md:w-[30%] h-[10vh] rounded-[7px] m-auto inset-0 z-50 fixed py-[0.75em]'> LOADING comments....</div>
+//   ) 
+//   } 
 return (
     <section className='comment-section md:w-[75%] lg:w-[60%]  m-auto pb-[1em] px-[1.5em]'>
             {/* subjected to changes  */}
