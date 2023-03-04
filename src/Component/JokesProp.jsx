@@ -32,12 +32,12 @@ const handleformModal=()=>{
   return (
 <div>     
        <section className="jokes-prop-card   md:w-[75%] lg:w-[60%]  m-auto py-[1em] px-[1.5em] rounded-[10px] mb-[2em]"> 
-            <div className="prop-img-div w-[3em] m-auto ">
+            <div className="prop-img-div w-[2em] m-auto ">
             <img src={props.src} alt="prop-emoji" className="category-img " /> </div>
             <p className="prop-title font-bold text-center "> {props.title} </p>
             {/* <p className="prop-title font-bold text-center "> {props.jokesid} </p> */}
-            <p className="prop-content text-center text-base my-2 "> {props.content}   </p>
-            <p className="prop-author-content text-center font-bold ">{props.author} </p>
+            <p className="prop-content text-center text-base my-2 break-all "> {props.content}   </p>
+            <p className="prop-author-content text-center font-bold text-slate-600">{props.author} </p>
                 <div className="props-icons flex justify-evenly mt-7"> 
                     <div className="likes cursor-pointer"> <FontAwesomeIcon icon={faThumbsUp} onClick={ handleLike} /> {like} </div>
                     <div className="dislike cursor-pointer"><FontAwesomeIcon icon={faThumbsDown} onClick={ handleDislike} /> {dislike} </div>
