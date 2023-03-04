@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect,useState } from 'react'
 import JokesProp from '../JokesProp'
 import emoji1 from "../../images/65031-emoticon-whatsapp-sticker-emoji-free-download-png-hq.png"
+import { Fade ,Roll, Slide,JackInTheBox} from "react-awesome-reveal";
 
 
 
@@ -39,10 +40,11 @@ const [Data, setData] = useState([]);
 
   return (
     // <section className="modal-section w-[80%]  md:w-[60%] m-auto ">
+  
     <section className="modal-section h-[60vh]  w-[80%]  md:w-[60%] m-auto inset-0 z-50 bg-white 
     fixed mb-[13em] py-3 rounded-2xl"> 
               <div className="modal-head-section flex justify-between px-5 mb-3">
-             <h3 className="text-2xl md:text-3xl font-semibold"> JOkes Category </h3>
+             <h3 className="text-2xl md:text-3xl font-semibold"> Romantic Jokes</h3>
              <button className='text-2xl font-semibold text-red-500 "'
                     onClick={() =>{ 
                        setShowModals()}}
@@ -50,7 +52,7 @@ const [Data, setData] = useState([]);
                    </button>
                </div>
   
-      <div className="modal-container  ">
+      <div className="modal-container ">
         <div className="modal-prop-div h-[80vh]   overflow-y-auto bg-white shadow-lg "> 
         <div className="relative p-6 flex-auto">
                       {/* the lines below are mapped from the api so are subjected to changes  */}

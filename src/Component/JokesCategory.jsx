@@ -49,7 +49,7 @@ const handleRomance=()=>{
   return (
     <div className='JokesCategory-section '> 
       <h1 className="jokescategory-head font-bold text-center text-2xl mb-[1em]"> JOKES IN  CATEGORY </h1>
-      <JackInTheBox> 
+      <Slide> 
       <div className='JokesCategory desktop '> 
 
       <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
@@ -129,7 +129,7 @@ const handleRomance=()=>{
       </div>  
     </section>    
      </div>
-     </JackInTheBox>
+     </Slide>
 
      {/* render the various modals  */}
     {showModals?(<Modal  showModals={showModals} setShowModals={setShowModals}/>):null } 
