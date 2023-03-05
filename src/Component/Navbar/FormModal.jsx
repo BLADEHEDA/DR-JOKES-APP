@@ -136,14 +136,16 @@ const FormModal = ( {showformModal,setshowformModal} ) => {
 
   return (
   
-    <section className="formmodal-section h-[60vh] py-1  w-[75%]  md:w-[35%] py-3   m-auto inset-0 z-50 bg-white fixed mb-[14em] rounded-xl">
-    <div className="modal-head-section1 text-center px-5 mb-0.5"     onClick={() =>{ 
+    <section className="formmodal-section h-[60vh] py-1  w-[75%]  md:w-[35%] py-3  m-auto inset-0 z-50  fixed mb-[14em]">
+<form className="relatives px-4 pb-1 md:px-7 pt-5 " onSubmit={handleSubmit} >
+  <div className="flex justify-between"> 
+  <h3 className="text-xl md:text-xl font-semibold center">Add Joke</h3> 
+<button className='text-xl font-semibold text-red-500 "'
+                    onClick={() =>{
                       setshowformModal()}}
-                  > 
-    <h3 className="text-xl md:text-xl font-semibold center">Add Jokes</h3>
+                  >  X
+                   </button> </div>
 
-      </div>
-<form className="relatives px-4 pb-1 md:px-7 " onSubmit={handleSubmit} >
     <div className="Author-div form-div ">
         {/* <div className=" mt-[0.5em]">  
         <label htmlFor="Author" className="author-label mt-[0.5em] text-sm p-2 md:text-lg  ">Author</label>

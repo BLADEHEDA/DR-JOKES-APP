@@ -63,7 +63,7 @@ return(
           })}
         </section>
    {/* the jokes below are manually Typed JOkes */}
-           <div className="space mb-[15em]"> 
+           <div className="space "> 
            <JokesProp
               title=" Laygh or die"
                content=" I always felt like I could do anything. That’s the main

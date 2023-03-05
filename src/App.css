@@ -61,28 +61,18 @@ width: 20em;
 }
 .relatives{
   background: rgb(247, 245, 245); 
-}
-.form-modal-div{
-  border:solid 1px black;
-    background :Black;
+    border:solid 1px black;
 }
 
 .formmodal-section{
-  background: rgb(247, 245, 245); 
-    /* border:solid 1px black; */
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    /* z-index: 9999; */
-   margin-top: 7.5em;
-    height: 60vh;
+    z-index: 9999;
+   margin-top: 5.5em;
 }
 .joke-input {
   border:solid 1px rgb(42, 40, 40);
   margin-top:0.5em;
   background: white; 
+  background: rgb(247, 245, 245); 
 }
 .joke-input:focus {
   outline:none;
@@ -115,7 +105,7 @@ width: 20em;
   left: 0;
   z-index: 9999;
   overflow: hidden;
- margin-top: 7.5em;
+ /* margin-top: 1em; */
   border:solid 1px black; 
 }
 
@@ -229,6 +219,15 @@ width: 25em;
 }
 .joke-input:focus {
   outline:none;
+}
+.modal-section {
+  /* overflow: hidden; */
+  /* overflow: auto; */
+ margin-top: 6em;
+  border:solid 1px black; 
+}
+.formmodal-section{
+ margin-top: 3.5em;
 }
 
  }
