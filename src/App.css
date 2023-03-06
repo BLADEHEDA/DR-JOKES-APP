@@ -98,16 +98,16 @@ width: 20em;
 }
 
 .modal-section {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 9999;
-  overflow: hidden;
- /* margin-top: 1em; */
+  overflow: hidden; 
+ margin-top: 1em; */
   border:solid 1px black; 
-}
+} 
 
 }
 
@@ -223,7 +223,7 @@ width: 25em;
 .modal-section {
   /* overflow: hidden; */
   /* overflow: auto; */
- margin-top: 6em;
+ /* margin-top: 6em; */
   border:solid 1px black; 
 }
 .formmodal-section{

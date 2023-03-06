@@ -31,53 +31,36 @@ return(
 ) 
 } 
   return (
-    <section className="modal-section h-[60vh]  w-[80%]  md:w-[60%] m-auto inset-0 z-50 bg-white fixed mb-[13em] py-3 rounded-2xl">
-             <div className="modal-head-section flex justify-between px-5 mb-3">
-             <h3 className="text-2xl md:text-3xl font-semibold"> Western Jokes </h3>
-                   <button className='text-2xl font-semibold text-red-500 "'
+    <section className="modal-section h-[60vh] px-[1em] w-[80%]  md:w-[60%] h-[85vh]  m-auto inset-0 z-50 bg-white 
+    fixed  py-3 rounded-2xl overflow-scroll"> 
+    {/* <article className='header-div fixed w-[60%]  z-[9999] mt-[-10px]'>  */}
+    <div className="modal-head-section flex justify-between px-5 mb-3">
+             <h3 className="text-2xl md:text-3xl font-semibold  "> Western Jokes</h3>
+             <button className='text-2xl font-semibold text-red-500   "'
                     onClick={() =>{ 
                        setShowModals4()}}
                   >  X
                    </button>
                </div>
-              
-      <div className="modal-container  ">
+    {/* </article> */}
 
-     
-  
-        <div className="modal-prop-div h-[80vh]   overflow-y-auto bg-white shadow-lg "> 
-        <div className="relative p-6 flex-auto">
-             {/* the lines below are mapped from the api so are subjected to changes  */}
-             <section className="Mapped-div-from Api">  
+  {/* subjected to changes  */}
+  <section className="Mapped-div-from Api">  
             {Data.map((data)=>{ const {id, punchline,setup}  = data ;
           return(
-            <div className="render-demos" key={id}>
+            <div className="render-demos" key={id}> 
           <JokesProp
-           jokesid={data.id}
                   title={punchline}
+                  jokesid={data.id}
                   content={setup} 
                   author={data.author.name}
                   src={emoji1}
-                  />
-        
+                  /> 
             </div>
           )
           })}
         </section>
-                   {/* the jokes below are manually Typed JOkes */}
-                   <JokesProp
-              title=" Laygh or die"
-               content=" I always felt like I could do anything. That’s the main
-               thing people are controlled by! Thoughts- their perception
-               of themselves! They're slowed down by their perception of
-               themselves. If you're taught you can’t do anything, you
-               won’t do anything. I was taught I could do everything."
-               author="Dudu Business"
-               src={emoji1}
-               />
-                </div>
-                 </div>
-      </div>
+
     </section>
   )
 }
