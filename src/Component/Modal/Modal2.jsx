@@ -34,7 +34,6 @@ return(
   return (
     <section className="modal-section h-[60vh] px-[1em] w-[80%]  md:w-[60%] h-[85vh]  m-auto inset-0 z-50 bg-white 
     fixed  py-3 rounded-2xl overflow-y-auto"> 
-    {/* <article className='header-div fixed w-[60%]  z-[9999] mt-[-10px]'>  */}
     <div className="modal-head-section flex justify-between px-5 mb-3">
              <h3 className="text-2xl md:text-3xl font-semibold  "> Education Jokes</h3>
              <button className='text-2xl font-semibold text-red-500   "'
@@ -43,9 +42,6 @@ return(
                   >  X
                    </button>
                </div>
-    {/* </article> */}
-
-  {/* subjected to changes  */}
   <section className="Mapped-div-from Api">  
             {Data.map((data)=>{ const {id, punchline,setup}  = data ;
           return(
