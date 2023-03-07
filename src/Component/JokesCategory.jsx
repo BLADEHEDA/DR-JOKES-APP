@@ -142,7 +142,7 @@ const handleRomance=()=>{
 {/* the values written below os subjected to changes  */}
 <Splide aria-label="My Favorite Images" className='splider mobile' >
   <SplideSlide className='SplideSlide' >
-  <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
+  <section className="Category jokescategory-divs rounded-[0.5em] p-[0.75em]  my-[0.5em]"> 
           <Category 
           src={heart}
           content="Get love and Relationship jokes that could spice up your mood and that of your loved ones "
@@ -157,7 +157,7 @@ const handleRomance=()=>{
     </section>
   </SplideSlide>
   <SplideSlide>
-  <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
+  <section className="Category jokescategory-divs rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
         <Category 
         src={school }
         content="Get School related jokes that could spice up your mood and make you think of good old school days "  
@@ -171,9 +171,9 @@ const handleRomance=()=>{
   </SplideSlide>
 
   <SplideSlide>
-    <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
+    <section className="Category jokescategory-divs rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
          <Category 
-        src={african}
+       src={western }
         content="Get amazing jokes that originate from western ends that shows you how amazing of a place it is to live in " 
         />
                  <div onClick={() => {   setShowModals3(!showModals3)}}
@@ -184,9 +184,9 @@ const handleRomance=()=>{
     </section>
   </SplideSlide>
   <SplideSlide>
-  <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
+  <section className="Category jokescategory-divs rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
            <Category 
-        src={western }
+        src={african}
         content="Get amazing jokes that originate from Africa that shows you how amazing of a place it is to live in " 
         />
                  <div onClick={() => {   setShowModals4(!showModals4)}}
@@ -198,7 +198,7 @@ const handleRomance=()=>{
   </SplideSlide>
 
     <SplideSlide>
-    <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
+    <section className="Category jokescategory-divs rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
          <Category 
         src={fanily}
         content="Get family and Relationship jokes that could spice up your mood and that of your loved ones " 
@@ -211,7 +211,7 @@ const handleRomance=()=>{
     </section>
   </SplideSlide>
   <SplideSlide>
-  <section className="Category jokescategory-div rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
+  <section className="Category jokescategory-divs rounded-[0.5em] p-[0.75em] my-[0.5em]"> 
           <Category 
         src={tech }
         content="Get Amazing Tech jokes that could spice up your mood and show you how a journey in tech is awesome " 
