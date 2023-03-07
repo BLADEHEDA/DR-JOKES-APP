@@ -24,7 +24,7 @@ const TestimoniMobile = () => {
         slidesToScroll: 1,
         lazyLoad: true,
         autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 3500,
        
       };
   return (

@@ -1,10 +1,6 @@
 import React from 'react'
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+// import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Fade ,Roll, Slide,JackInTheBox} from "react-awesome-reveal";
-
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Jokes=(props)=>{
     return(
@@ -31,17 +27,6 @@ const JokesDay = () => {
 
     }
 ]
-// heree are the settingd of the App
-// const settings = {
-//     infinite: true,
-//     // dots: true,
-//     slidesToShow: 2,
-//     slidesToScroll: 1,
-//     lazyLoad: true,
-//     autoplay: true,
-//   autoplaySpeed: 4000,
-   
-//   };
   return (
     <Slide> 
     <div className='dayjokes mb-[4em] '>
