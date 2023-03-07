@@ -64,7 +64,6 @@ width: 20em;
 }
 .jokes-prop-card{
   background: rgb(247, 245, 245);
-  /* border:solid 1px black; */
 }
 
 .comment-section,.form-comment-div,.commetn-section{
@@ -216,7 +215,6 @@ flex: 50%;
  } 
  .hero-img{
   margin:0em 0em;
-    /* border: solid 1px black;   */
 }
 .hero-pic{
 width: 25em;
@@ -225,7 +223,6 @@ width: 25em;
   outline:none;
 }
 .modal-section {
-  /* border:solid 1px black;  */
   box-shadow: 0 0 50px #ccc;
 } 
 .formmodal-section{
