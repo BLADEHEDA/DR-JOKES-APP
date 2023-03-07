@@ -32,16 +32,16 @@ const JokesDay = () => {
     }
 ]
 // heree are the settingd of the App
-const settings = {
-    infinite: true,
-    dots: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    lazyLoad: true,
-    autoplay: true,
-  autoplaySpeed: 2000,
+// const settings = {
+//     infinite: true,
+//     // dots: true,
+//     slidesToShow: 2,
+//     slidesToScroll: 1,
+//     lazyLoad: true,
+//     autoplay: true,
+//   autoplaySpeed: 4000,
    
-  };
+//   };
   return (
     <Slide> 
     <div className='dayjokes mb-[4em] '>

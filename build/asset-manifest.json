@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cb77a379.css",
-    "main.js": "/static/js/main.3ca9a2ae.js",
+    "main.css": "/static/css/main.3b66d554.css",
+    "main.js": "/static/js/main.f351247d.js",
     "static/media/65023-thought-thinking-emoji-free-hq-image.png": "/static/media/65023-thought-thinking-emoji-free-hq-image.b75f2f06e46d3fa8a8cb.png",
     "static/media/65057-emoticon-signal-smiley-thumb-emoji-free-frame.png": "/static/media/65057-emoticon-signal-smiley-thumb-emoji-free-frame.578836a1083479b10123.png",
     "static/media/23847-3-school-file.png": "/static/media/23847-3-school-file.53b869c7c897cc9d8555.png",
@@ -18,11 +18,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "static/media/icon-close.svg": "/static/media/icon-close.c390448669f3a8a4c4b2ada2f9938959.svg",
-    "main.cb77a379.css.map": "/static/css/main.cb77a379.css.map",
-    "main.3ca9a2ae.js.map": "/static/js/main.3ca9a2ae.js.map"
+    "main.3b66d554.css.map": "/static/css/main.3b66d554.css.map",
+    "main.f351247d.js.map": "/static/js/main.f351247d.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb77a379.css",
-    "static/js/main.3ca9a2ae.js"
+    "static/css/main.3b66d554.css",
+    "static/js/main.f351247d.js"
   ]
 }
