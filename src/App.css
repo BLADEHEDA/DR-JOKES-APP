@@ -108,7 +108,7 @@ width: 20em;
 }
 
 .modal-section {
-  box-shadow: -1px 1gitpx 5px 5px rgba(217, 212, 212, 0.75);
+  box-shadow: -1px 1px 5px 5px rgba(167, 166, 166, 0.75);
 } 
 
 }
@@ -223,7 +223,9 @@ width: 25em;
 }
 .modal-section {
   /* box-shadow: 0 0 50px #ccc; */
-  box-shadow: -1px 1px 5px 5px rgba(217, 212, 212, 0.75);
+  /* box-shadow: -1px 1px 5px 7px rgba(101, 100, 100, 0.75);x: ; */
+  box-shadow: -1px 1px 5px 5px rgba(167, 166, 166, 0.75);
+  width: 50%;
 } 
 .formmodal-section{
  margin-top: 3.5em;
